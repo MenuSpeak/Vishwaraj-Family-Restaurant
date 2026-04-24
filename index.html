@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
   <title>Noir & Gold • Fine Dining</title>
-  <!-- Premium Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -26,7 +25,6 @@
       position: relative;
     }
 
-    /* Background pattern with food icons */
     body::before {
       content: '';
       position: fixed;
@@ -42,7 +40,6 @@
       z-index: 0;
     }
 
-    /* Floating food emojis background */
     .bg-icons {
       position: fixed;
       top: 0;
@@ -76,13 +73,11 @@
       75% { transform: translateY(-25px) rotate(2deg); }
     }
 
-    /* Main content wrapper */
     .main-content {
       position: relative;
       z-index: 1;
     }
 
-    /* ----- Sticky Header (dark glass) ----- */
     .dark-header {
       position: sticky;
       top: 0;
@@ -134,7 +129,6 @@
       color: #0d0b0a;
     }
 
-    /* Chef icon section below header */
     .chef-strip {
       text-align: center;
       padding: 0.5rem;
@@ -154,7 +148,6 @@
       gap: 0.3rem;
     }
 
-    /* ----- Sticky Category Bar ----- */
     .category-bar {
       position: sticky;
       top: 62px;
@@ -193,7 +186,6 @@
       box-shadow: 0 6px 18px rgba(212,175,55,0.4);
     }
 
-    /* Menu container */
     .menu-container {
       padding: 0.3rem 0.8rem;
       max-width: 700px;
@@ -226,7 +218,6 @@
       gap: 0.5rem;
     }
 
-    /* Compact single-line menu row */
     .menu-row {
       display: flex;
       align-items: center;
@@ -331,7 +322,6 @@
       transform: scale(1.1);
     }
 
-    /* Special badges */
     .badge {
       font-size: 0.6rem;
       background: rgba(212, 175, 55, 0.2);
@@ -341,7 +331,6 @@
       margin-left: 0.3rem;
     }
 
-    /* Floating Cart & WA */
     .float-buttons {
       position: fixed;
       bottom: 1.5rem;
@@ -389,7 +378,6 @@
       justify-content: center;
     }
 
-    /* Slide-in Cart Panel */
     .cart-panel {
       position: fixed;
       top: 0;
@@ -491,7 +479,6 @@
       margin-top: 0.5rem;
     }
 
-    /* Google Map Section */
     .location-section {
       padding: 2rem 1rem;
       text-align: center;
@@ -523,7 +510,6 @@
       box-shadow: 0 8px 24px rgba(212,175,55,0.3);
     }
 
-    /* Footer with icons */
     .footer-strip {
       text-align: center;
       padding: 1rem;
@@ -557,687 +543,185 @@
   </style>
 </head>
 <body>
-  <!-- Background floating icons -->
   <div class="bg-icons">
-    <span class="bg-icon">🍽️</span>
-    <span class="bg-icon">👨‍🍳</span>
-    <span class="bg-icon">🥂</span>
-    <span class="bg-icon">🍷</span>
-    <span class="bg-icon">🥩</span>
-    <span class="bg-icon">🍝</span>
-    <span class="bg-icon">🧁</span>
-    <span class="bg-icon">🍣</span>
-  </div>
+    <span class="bg-icon">🍽️</span><span class="bg-icon">👨‍🍳</span><span class="bg-icon">🥂</span><span class="bg-icon">🍷</span><span class="bg-icon">🥩</span><span class="bg-icon">🍝</span><span class="bg-icon">🧁</span><span class="bg-icon">🍣</span>
+</div>
 
-  <!-- Main Content -->
-  <div class="main-content">
-    <!-- Dark Sticky Header with centered logo PNG -->
-    <header class="dark-header">
+<div class="main-content" style="padding-top:100px;">
+    
+    <header class="dark-header" 
+        style="position:fixed; top:0; left:0; width:100%; z-index:9999; 
+               background:#111; padding:10px 15px; 
+               display:flex; align-items:center; justify-content:space-between;
+               box-shadow:0 2px 10px rgba(0,0,0,0.6);">
+
       <div class="header-icons">
-        <span>👨‍🍳</span>
-        <span>⭐</span>
+        <span>👨‍🍳</span><span>⭐</span>
       </div>
-      <!-- REPLACE src WITH YOUR PNG LOGO FILE -->
-      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='50'%3E%3Ctext x='10' y='35' font-family='Poppins' font-size='20' fill='%23d4af37' font-weight='bold'%3E🍽️ NOIR %26 GOLD%3C/text%3E%3C/svg%3E" alt="Restaurant Logo" class="logo-img" id="logoImage">
-      <a href="tel:+919284969878" class="call-btn-header">
-        <span>📞</span> Call
+
+      <!-- <img src="logo.png" alt="Restaurant Logo" class="logo-img"  -->
+           <!-- style="height:50px; object-fit:contain;"> -->
+
+      <a href="tel:+919284969878" class="call-btn-header" 
+         style="background:gold; color:black; padding:6px 12px; 
+                border-radius:20px; text-decoration:none; font-weight:bold;">
+         📞 Call
       </a>
+
     </header>
 
-    <!-- Chef strip -->
-    <div class="chef-strip">
-      <span>👨‍🍳 Chef's Special</span>
-      <span>⭐ Fine Dining</span>
-      <span>🍷 Premium Bar</span>
-      <span>🥂 Live Kitchen</span>
-    </div>
+</div>
+<img src="logo.png" alt="Logo" style="width:300px; height:auto; display:block; margin:0 auto;">
 
-    <!-- Sticky Category Bar -->
     <div class="category-bar" id="categoryBar"></div>
-
-    <!-- Menu Items Container -->
     <div class="menu-container" id="menuContainer"></div>
 
-    <!-- Google Map Location -->
     <div class="location-section">
       <p style="color:#bcb09b;">Find us on Google Maps</p>
-      <a href="https://maps.app.goo.gl/YOURGOOGLEMAPSLINK" target="_blank" class="location-btn">
-        <span>📍</span> Open Location in Maps
-      </a>
+      <a href="https://maps.app.goo.gl/YOURGOOGLEMAPSLINK" target="_blank" class="location-btn"><span>📍</span> Open Location in Maps</a>
     </div>
 
-    <!-- Footer -->
     <div class="footer-strip">
-      <span>🍽️ Fine Dining</span>
-      <span>👨‍🍳 Expert Chefs</span>
-      <span>🥂 Premium Experience</span>
-      <span>⭐ 5 Star Rating</span>
+      <span>🍽️ Fine Dining</span><span>👨‍🍳 Expert Chefs</span><span>🥂 Premium Experience</span><span>⭐ 5 Star Rating</span>
     </div>
   </div>
 
-  <!-- Floating Buttons -->
   <div class="float-buttons">
-    <button class="float-btn" id="whatsappFloat" title="Chat on WhatsApp">
-      <span>💬</span>
-    </button>
-    <button class="float-btn" id="cartFloatBtn">
-      <span>🛒</span>
-      <span class="cart-badge" id="cartBadge">0</span>
-    </button>
+    <button class="float-btn" id="whatsappFloat"><span>💬</span></button>
+    <button class="float-btn" id="cartFloatBtn"><span>🛒</span><span class="cart-badge" id="cartBadge">0</span></button>
   </div>
 
-  <!-- Slide-in Cart Panel -->
   <div class="cart-panel" id="cartPanel">
-    <div class="cart-header">
-      <h3 style="color:#d4af37;">🛒 Your Order</h3>
-      <button class="close-cart" id="closeCartBtn">&times;</button>
-    </div>
+    <div class="cart-header"><h3 style="color:#d4af37;">🛒 Your Order</h3><button class="close-cart" id="closeCartBtn">&times;</button></div>
     <div class="cart-items" id="cartItemsContainer"></div>
-    <div class="table-input-area">
-      <input type="number" id="tableNumber" placeholder="🪑 Table Number (required)" min="1">
-    </div>
-    <div class="total-bill" id="cartTotal">
-      <span>💰</span> ₹0
-    </div>
-    <button class="wa-order-btn" id="placeOrderBtn">
-      📲 Order on WhatsApp
-    </button>
+    <div class="table-input-area"><input type="number" id="tableNumber" placeholder="🪑 Table Number (required)" min="1"></div>
+    <div class="total-bill" id="cartTotal"><span>💰</span> ₹0</div>
+    <button class="wa-order-btn" id="placeOrderBtn">📲 Order on WhatsApp</button>
   </div>
 
   <script>
-    (() => {
-      // ---------- ADD YOUR MENU ITEMS HERE ----------
-const menuItems = [
-    // Veg Soup
-    { id: 1, name: 'Tomato Soup', price: 90, category: 'Veg Soup', badge: '' },
-    { id: 2, name: 'Tomato Soup 1/2', price: 120, category: 'Veg Soup', badge: '' },
-    { id: 3, name: 'Veg hot & Sour Soup', price: 90, category: 'Veg Soup', badge: '' },
-    { id: 4, name: 'Veg hot & Sour Soup 1/2', price: 120, category: 'Veg Soup', badge: '' },
-    { id: 5, name: 'Veg Corn Soup', price: 90, category: 'Veg Soup', badge: '' },
-    { id: 6, name: 'Veg Corn Soup 1/2', price: 120, category: 'Veg Soup', badge: '' },
-    { id: 7, name: 'Veg Manchurian Soup', price: 90, category: 'Veg Soup', badge: '' },
-    { id: 8, name: 'Veg Manchurian Soup 1/2', price: 120, category: 'Veg Soup', badge: '' },
-    { id: 9, name: 'Hot Garlic Soup', price: 140, category: 'Veg Soup', badge: 'Chef Special' },
+    (function() {
+      // ---------- COMPLETE MENU - ALL 294 ITEMS (NO ITEM MISSING) ----------
+      const menuItems = [
+        { id: 1, name: 'Tomato Soup', price: 90, category: 'Veg Soup', badge: '' },{ id: 2, name: 'Tomato Soup 1/2', price: 120, category: 'Veg Soup', badge: '' },{ id: 3, name: 'Veg hot & Sour Soup', price: 90, category: 'Veg Soup', badge: '' },{ id: 4, name: 'Veg hot & Sour Soup 1/2', price: 120, category: 'Veg Soup', badge: '' },{ id: 5, name: 'Veg Corn Soup', price: 90, category: 'Veg Soup', badge: '' },{ id: 6, name: 'Veg Corn Soup 1/2', price: 120, category: 'Veg Soup', badge: '' },{ id: 7, name: 'Veg Manchurian Soup', price: 90, category: 'Veg Soup', badge: '' },{ id: 8, name: 'Veg Manchurian Soup 1/2', price: 120, category: 'Veg Soup', badge: '' },{ id: 9, name: 'Hot Garlic Soup', price: 140, category: 'Veg Soup', badge: 'Chef Special' },
+        { id: 10, name: 'Chicken Corn Soup', price: 120, category: 'Non-Veg Soup', badge: '' },{ id: 11, name: 'Chicken Corn Soup 1/2', price: 150, category: 'Non-Veg Soup', badge: '' },{ id: 12, name: 'Chicken Hot & Sour Soup', price: 120, category: 'Non-Veg Soup', badge: '' },{ id: 13, name: 'Chicken Hot & Sour Soup 1/2', price: 150, category: 'Non-Veg Soup', badge: '' },{ id: 14, name: 'Chicken Manchow Soup', price: 120, category: 'Non-Veg Soup', badge: 'Bestseller' },{ id: 15, name: 'Chicken Manchow Soup 1/2', price: 150, category: 'Non-Veg Soup', badge: '' },{ id: 16, name: 'Chicken Egg Drop Soup', price: 160, category: 'Non-Veg Soup', badge: '' },
+        { id: 17, name: 'Veg Manchurian Dry', price: 150, category: 'Veg Starter', badge: '' },{ id: 18, name: 'Veg Manchurian Wet', price: 160, category: 'Veg Starter', badge: '' },{ id: 19, name: 'Gobi Manchurian Dry', price: 150, category: 'Veg Starter', badge: '' },{ id: 20, name: 'Gobi Manchurian Wet', price: 160, category: 'Veg Starter', badge: '' },{ id: 21, name: 'Baby Corn Manchurian', price: 190, category: 'Veg Starter', badge: '' },{ id: 22, name: 'Baby Corn Chilli', price: 190, category: 'Veg Starter', badge: '' },{ id: 23, name: 'Baby Corn 65', price: 190, category: 'Veg Starter', badge: '' },{ id: 24, name: 'Baby Corn Pepper Fry', price: 220, category: 'Veg Starter', badge: '' },{ id: 25, name: 'Mushroom Chilli', price: 210, category: 'Veg Starter', badge: '' },{ id: 26, name: 'Mushroom Manchurian', price: 210, category: 'Veg Starter', badge: '' },{ id: 27, name: 'Mushroom 65', price: 210, category: 'Veg Starter', badge: '' },{ id: 28, name: 'Mushroom pepper Chilli Dry', price: 240, category: 'Veg Starter', badge: '' },{ id: 29, name: 'Veg Spring Roll', price: 250, category: 'Veg Starter', badge: '' },{ id: 30, name: 'Paneer 65', price: 220, category: 'Veg Starter', badge: '' },{ id: 31, name: 'Paneer Chilli', price: 230, category: 'Veg Starter', badge: '' },{ id: 32, name: 'Paneer Manchurian', price: 220, category: 'Veg Starter', badge: '' },{ id: 33, name: 'Paneer Kantaki', price: 240, category: 'Veg Starter', badge: '' },{ id: 34, name: 'Paneer kurkure', price: 260, category: 'Veg Starter', badge: '' },{ id: 35, name: 'Paneer Satay', price: 260, category: 'Veg Starter', badge: '' },{ id: 36, name: 'Paneer Dragon', price: 260, category: 'Veg Starter', badge: '' },{ id: 37, name: 'Paneer Majestice', price: 220, category: 'Veg Starter', badge: '' },{ id: 38, name: 'schezwan paneer', price: 220, category: 'Veg Starter', badge: '' },{ id: 39, name: 'Paneer Pakoda', price: 240, category: 'Veg Starter', badge: '' },{ id: 40, name: 'Veg 65', price: 180, category: 'Veg Starter', badge: '' },{ id: 41, name: 'Gobi 65', price: 200, category: 'Veg Starter', badge: '' },{ id: 42, name: 'Crispy Fried Corn', price: 190, category: 'Veg Starter', badge: '' },{ id: 43, name: 'Matki Fry', price: 110, category: 'Veg Starter', badge: '' },{ id: 44, name: 'Chana Roast', price: 110, category: 'Veg Starter', badge: '' },{ id: 45, name: 'Onion Pakoda', price: 110, category: 'Veg Starter', badge: '' },{ id: 46, name: 'Finger Chips', price: 120, category: 'Veg Starter', badge: '' },{ id: 47, name: 'Boil Peanut', price: 60, category: 'Veg Starter', badge: '' },{ id: 48, name: 'Chana Masalaa', price: 130, category: 'Veg Starter', badge: '' },{ id: 49, name: 'Lehsun Fry', price: 120, category: 'Veg Starter', badge: '' },{ id: 50, name: 'Mix Chinese Platter', price: 500, category: 'Veg Starter', badge: 'Signature' },
+        { id: 51, name: 'Chicken Lollipop (6pic)', price: 320, category: 'Non-Veg Starter', badge: 'Bestseller' },{ id: 52, name: 'Chicken Lollipop (3pic)', price: 170, category: 'Non-Veg Starter', badge: '' },{ id: 53, name: 'Chicken Drumsticks (6pic)', price: 320, category: 'Non-Veg Starter', badge: '' },{ id: 54, name: 'Chicken Drumsticks (3pic)', price: 170, category: 'Non-Veg Starter', badge: '' },{ id: 55, name: 'Chicken Spring Roll', price: 270, category: 'Non-Veg Starter', badge: '' },{ id: 56, name: 'Chicken Chilli', price: 250, category: 'Non-Veg Starter', badge: '' },{ id: 57, name: 'Chicken 65', price: 240, category: 'Non-Veg Starter', badge: '' },{ id: 58, name: 'Chicken Manchurian', price: 240, category: 'Non-Veg Starter', badge: '' },{ id: 59, name: 'Chicken 555', price: 280, category: 'Non-Veg Starter', badge: '' },{ id: 60, name: 'Chicken Majestic', price: 280, category: 'Non-Veg Starter', badge: '' },{ id: 61, name: 'Chicken Lemon', price: 260, category: 'Non-Veg Starter', badge: '' },{ id: 62, name: 'Pepper Chicken', price: 280, category: 'Non-Veg Starter', badge: '' },{ id: 63, name: 'Chicken Kentucky', price: 260, category: 'Non-Veg Starter', badge: '' },{ id: 64, name: 'Chicken Kurkure', price: 320, category: 'Non-Veg Starter', badge: '' },{ id: 65, name: 'Slice Chicken', price: 280, category: 'Non-Veg Starter', badge: '' },{ id: 66, name: 'Chicken Wings', price: 210, category: 'Non-Veg Starter', badge: '' },{ id: 67, name: 'garlic Chicken', price: 260, category: 'Non-Veg Starter', badge: '' },{ id: 68, name: 'Chicken roasted', price: 250, category: 'Non-Veg Starter', badge: '' },{ id: 69, name: 'Schezwan Chicken', price: 260, category: 'Non-Veg Starter', badge: '' },{ id: 70, name: 'Chicken Honkong', price: 280, category: 'Non-Veg Starter', badge: '' },{ id: 71, name: 'Chicken Satay', price: 290, category: 'Non-Veg Starter', badge: '' },
+        { id: 72, name: 'Apollo Fish', price: 280, category: 'Sea Food Starter', badge: '' },{ id: 73, name: 'Chilli Fish', price: 250, category: 'Sea Food Starter', badge: '' },{ id: 74, name: 'Fish Manchurian', price: 250, category: 'Sea Food Starter', badge: '' },{ id: 75, name: 'Fish 65', price: 250, category: 'Sea Food Starter', badge: '' },{ id: 76, name: 'Fish Roast', price: 180, category: 'Sea Food Starter', badge: '' },{ id: 77, name: 'Loose Prawns', price: 320, category: 'Sea Food Starter', badge: '' },{ id: 78, name: 'Chilli Prawns', price: 320, category: 'Sea Food Starter', badge: '' },{ id: 79, name: 'Prawns Manchurian', price: 320, category: 'Sea Food Starter', badge: '' },{ id: 80, name: 'Prawns 65', price: 320, category: 'Sea Food Starter', badge: '' },{ id: 81, name: 'Fried Prawns', price: 350, category: 'Sea Food Starter', badge: '' },
+        { id: 82, name: 'Paneer Tikka', price: 240, category: 'Veg Kabab', badge: '' },{ id: 83, name: 'Paneer Malai Tikka', price: 250, category: 'Veg Kabab', badge: '' },{ id: 84, name: 'Hara Bhara Kababs', price: 220, category: 'Veg Kabab', badge: '' },{ id: 85, name: 'Achari Paneer Tikka', price: 250, category: 'Veg Kabab', badge: '' },{ id: 86, name: 'Paneer Banjara', price: 260, category: 'Veg Kabab', badge: '' },{ id: 87, name: 'Paneer Reshmi Kabab', price: 260, category: 'Veg Kabab', badge: '' },{ id: 88, name: 'Paneer Kali Mirch', price: 260, category: 'Veg Kabab', badge: '' },{ id: 89, name: 'Paneer Pahadi Kabab', price: 260, category: 'Veg Kabab', badge: '' },{ id: 90, name: 'Veg Tandoor Platter', price: 1200, category: 'Veg Kabab', badge: 'Chef Special' },
+        { id: 91, name: 'Tandoori Chicken Full', price: 480, category: 'Non Veg Kabab', badge: '' },{ id: 92, name: 'Tandoori Chicken Half', price: 270, category: 'Non Veg Kabab', badge: '' },{ id: 93, name: 'Tangdi Kabab Full', price: 550, category: 'Non Veg Kabab', badge: '' },{ id: 94, name: 'Tangdi Kabab Half', price: 300, category: 'Non Veg Kabab', badge: '' },{ id: 95, name: 'Chicken Tikka', price: 280, category: 'Non Veg Kabab', badge: 'Bestseller' },{ id: 96, name: 'Chicken Reshmi Kabab', price: 300, category: 'Non Veg Kabab', badge: '' },{ id: 97, name: 'Chicken Banjara Kabab', price: 290, category: 'Non Veg Kabab', badge: '' },{ id: 98, name: 'Chicken Pahadi Kabab', price: 290, category: 'Non Veg Kabab', badge: '' },{ id: 99, name: 'Chicken Malai Kabab', price: 290, category: 'Non Veg Kabab', badge: '' },{ id: 100, name: 'Chicken Achari Kabab', price: 290, category: 'Non Veg Kabab', badge: '' },{ id: 101, name: 'Chicken Kali Mirch Kabab', price: 300, category: 'Non Veg Kabab', badge: '' },{ id: 102, name: 'Tiranga Kabab', price: 380, category: 'Non Veg Kabab', badge: '' },{ id: 103, name: 'Nonveg Tandoor Platter', price: 1400, category: 'Non Veg Kabab', badge: 'Signature' },
+        { id: 104, name: 'Aloo Gobi', price: 180, category: 'Veg Main Course', badge: '' },{ id: 105, name: 'Bhendi Fry Masala', price: 180, category: 'Veg Main Course', badge: '' },{ id: 106, name: 'Baingan Masala/Bharta', price: 180, category: 'Veg Main Course', badge: '' },{ id: 107, name: 'Baby Corn Mushroom Curry', price: 250, category: 'Veg Main Course', badge: '' },{ id: 108, name: 'Mix Veg Curry', price: 180, category: 'Veg Main Course', badge: '' },{ id: 109, name: 'Methi Malai', price: 230, category: 'Veg Main Course', badge: '' },{ id: 110, name: 'Mutter Mushroom', price: 220, category: 'Veg Main Course', badge: '' },{ id: 111, name: 'Veg Kolhapuri', price: 190, category: 'Veg Main Course', badge: '' },{ id: 112, name: 'Veg Handi', price: 180, category: 'Veg Main Course', badge: '' },{ id: 113, name: 'Veg Kadhai', price: 190, category: 'Veg Main Course', badge: '' },{ id: 114, name: 'Veg Deewani Handi', price: 200, category: 'Veg Main Course', badge: '' },{ id: 115, name: 'Veg Hydrabadi', price: 200, category: 'Veg Main Course', badge: '' },{ id: 116, name: 'Veg Do Pyaza', price: 190, category: 'Veg Main Course', badge: '' },{ id: 117, name: 'Veg Chatpata', price: 210, category: 'Veg Main Course', badge: '' },{ id: 118, name: 'Veg Jaipuri', price: 210, category: 'Veg Main Course', badge: '' },{ id: 119, name: 'Veg Bhuna Masala', price: 230, category: 'Veg Main Course', badge: '' },{ id: 120, name: 'Lehsuni Palak', price: 220, category: 'Veg Main Course', badge: '' },{ id: 121, name: 'Lehsuni Methi', price: 220, category: 'Veg Main Course', badge: '' },{ id: 122, name: 'Veg Kofta', price: 250, category: 'Veg Main Course', badge: '' },{ id: 123, name: 'Paneer Kofta', price: 250, category: 'Veg Main Course', badge: '' },{ id: 124, name: 'Malai Kofta', price: 250, category: 'Veg Main Course', badge: '' },{ id: 125, name: 'Plain Palak', price: 180, category: 'Veg Main Course', badge: '' },{ id: 126, name: 'Tomato Chutney', price: 170, category: 'Veg Main Course', badge: '' },{ id: 127, name: 'Chana Masala', price: 190, category: 'Veg Main Course', badge: '' },{ id: 128, name: 'Rajma Masala', price: 190, category: 'Veg Main Course', badge: '' },{ id: 129, name: 'Gobi Masala', price: 190, category: 'Veg Main Course', badge: '' },{ id: 130, name: 'Tawa Besan', price: 170, category: 'Veg Main Course', badge: '' },{ id: 131, name: 'Besan', price: 160, category: 'Veg Main Course', badge: '' },{ id: 132, name: 'Shev Bhaji', price: 160, category: 'Veg Main Course', badge: '' },{ id: 133, name: 'Veg Gravy', price: 170, category: 'Veg Main Course', badge: '' },
+        { id: 134, name: 'Paneer Butter Masala', price: 240, category: 'Paneer Main Course', badge: 'Bestseller' },{ id: 135, name: 'Paneer Tikka Masala', price: 260, category: 'Paneer Main Course', badge: '' },{ id: 136, name: 'Paneer Maharaja', price: 270, category: 'Paneer Main Course', badge: 'Signature' },{ id: 137, name: 'Paneer Lajjatdar', price: 260, category: 'Paneer Main Course', badge: '' },{ id: 138, name: 'Paneer Kadai', price: 250, category: 'Paneer Main Course', badge: '' },{ id: 139, name: 'Paneer Shahi', price: 260, category: 'Paneer Main Course', badge: '' },{ id: 140, name: 'Paneer Do Pyaza', price: 250, category: 'Paneer Main Course', badge: '' },{ id: 141, name: 'Palak Paneer', price: 220, category: 'Paneer Main Course', badge: '' },{ id: 142, name: 'Paneer Chatpata', price: 250, category: 'Paneer Main Course', badge: '' },{ id: 143, name: 'Paneer Kolhapuri', price: 250, category: 'Paneer Main Course', badge: '' },{ id: 144, name: 'Paneer Hyderabadi', price: 260, category: 'Paneer Main Course', badge: '' },{ id: 145, name: 'Paneer Punjabi', price: 260, category: 'Paneer Main Course', badge: '' },{ id: 146, name: 'Kaju Paneer', price: 280, category: 'Paneer Main Course', badge: '' },{ id: 147, name: 'Kaju Curry/Masala', price: 290, category: 'Paneer Main Course', badge: '' },{ id: 148, name: 'Mushroom Paneer', price: 290, category: 'Paneer Main Course', badge: '' },{ id: 149, name: 'Mushroom Curry/Masala', price: 280, category: 'Paneer Main Course', badge: '' },{ id: 150, name: 'Paneer Nawabi', price: 300, category: 'Paneer Main Course', badge: '' },{ id: 151, name: 'Paneer Shahi Korma', price: 290, category: 'Paneer Main Course', badge: '' },{ id: 152, name: 'Methi Chaman', price: 300, category: 'Paneer Main Course', badge: '' },{ id: 153, name: 'Paneer Bhurji', price: 280, category: 'Paneer Main Course', badge: '' },{ id: 154, name: 'Veg Gravy Kaju', price: 200, category: 'Paneer Main Course', badge: '' },{ id: 155, name: 'Paneer Masala', price: 210, category: 'Paneer Main Course', badge: '' },{ id: 156, name: 'Methi Paneer', price: 240, category: 'Paneer Main Course', badge: '' },{ id: 157, name: 'Mutter Paneer', price: 260, category: 'Paneer Main Course', badge: '' },
+        { id: 158, name: 'Butter Chicken (Boneless)', price: 280, category: 'Non-Veg Main Course', badge: 'Bestseller' },{ id: 159, name: 'Chicken Tikka Masala', price: 290, category: 'Non-Veg Main Course', badge: '' },{ id: 160, name: 'Chicken Curry', price: 250, category: 'Non-Veg Main Course', badge: '' },{ id: 161, name: 'Chicken lapeta', price: 250, category: 'Non-Veg Main Course', badge: '' },{ id: 162, name: 'Chicken Kadai', price: 280, category: 'Non-Veg Main Course', badge: '' },{ id: 163, name: 'Chicken Do Pyaza', price: 260, category: 'Non-Veg Main Course', badge: '' },{ id: 164, name: 'Chicken Adraki', price: 280, category: 'Non-Veg Main Course', badge: '' },{ id: 165, name: 'Chicken Rada Masala', price: 290, category: 'Non-Veg Main Course', badge: '' },{ id: 166, name: 'Chicken Afgani Masala', price: 300, category: 'Non-Veg Main Course', badge: '' },{ id: 167, name: 'Dum Ka Chicken', price: 320, category: 'Non-Veg Main Course', badge: '' },{ id: 168, name: 'Methi Chicken', price: 300, category: 'Non-Veg Main Course', badge: '' },{ id: 169, name: 'Chicken Mughlai', price: 300, category: 'Non-Veg Main Course', badge: '' },{ id: 170, name: 'Andhra Chicken', price: 290, category: 'Non-Veg Main Course', badge: '' },{ id: 171, name: 'Chicken Kolhapuri', price: 290, category: 'Non-Veg Main Course', badge: '' },{ id: 172, name: 'Chicken Hydrabadi', price: 290, category: 'Non-Veg Main Course', badge: '' },{ id: 173, name: 'Chicken Nawabi', price: 310, category: 'Non-Veg Main Course', badge: '' },{ id: 174, name: 'Chicken Punjabi', price: 310, category: 'Non-Veg Main Course', badge: '' },{ id: 175, name: 'Chicken Achari Curry', price: 280, category: 'Non-Veg Main Course', badge: '' },{ id: 176, name: 'Chicken Masala', price: 280, category: 'Non-Veg Main Course', badge: '' },{ id: 177, name: 'Egg Boil', price: 40, category: 'Non-Veg Main Course', badge: '' },{ id: 178, name: 'Egg Boil Fry', price: 60, category: 'Non-Veg Main Course', badge: '' },{ id: 179, name: 'Egg Omelette', price: 90, category: 'Non-Veg Main Course', badge: '' },{ id: 180, name: 'Egg Curry', price: 150, category: 'Non-Veg Main Course', badge: '' },{ id: 181, name: 'Egg Masala', price: 170, category: 'Non-Veg Main Course', badge: '' },{ id: 182, name: 'Egg Bhurji', price: 130, category: 'Non-Veg Main Course', badge: '' },
+        { id: 183, name: 'Mutton Curry', price: 270, category: 'Mutton Main Course', badge: '' },{ id: 184, name: 'Mutton Masala', price: 290, category: 'Mutton Main Course', badge: '' },{ id: 185, name: 'Andhra Mutton', price: 300, category: 'Mutton Main Course', badge: '' },{ id: 186, name: 'Mutton Mughlai', price: 300, category: 'Mutton Main Course', badge: '' },{ id: 187, name: 'Mutton Afghani', price: 300, category: 'Mutton Main Course', badge: '' },{ id: 188, name: 'Mutton Do Pyaza', price: 280, category: 'Mutton Main Course', badge: '' },{ id: 189, name: 'Mutton Kali Mirch', price: 280, category: 'Mutton Main Course', badge: '' },{ id: 190, name: 'Mutton Fry', price: 290, category: 'Mutton Main Course', badge: '' },{ id: 191, name: 'Achari Mutton', price: 280, category: 'Mutton Main Course', badge: '' },{ id: 192, name: 'Methi Mutton', price: 290, category: 'Mutton Main Course', badge: '' },{ id: 193, name: 'Mutton Kolhapuri', price: 300, category: 'Mutton Main Course', badge: '' },{ id: 194, name: 'Mutton Hydrabadi', price: 310, category: 'Mutton Main Course', badge: '' },{ id: 195, name: 'Mutton Kheema', price: 330, category: 'Mutton Main Course', badge: '' },{ id: 196, name: 'Mutton Korma', price: 330, category: 'Mutton Main Course', badge: '' },
+        { id: 197, name: 'Fish Curry', price: 290, category: 'Sea Food Main Course', badge: '' },{ id: 198, name: 'Fish Fry', price: 290, category: 'Sea Food Main Course', badge: '' },{ id: 199, name: 'Fish Masala', price: 290, category: 'Sea Food Main Course', badge: '' },{ id: 200, name: 'Prawn Curry', price: 320, category: 'Sea Food Main Course', badge: '' },{ id: 201, name: 'Prawn Fry', price: 320, category: 'Sea Food Main Course', badge: '' },{ id: 202, name: 'Prawn masala', price: 320, category: 'Sea Food Main Course', badge: '' },
+        { id: 203, name: 'Egg Biryani', price: 230, category: 'Non-Veg Biryani', badge: '' },{ id: 204, name: 'Chicken Biryani', price: 270, category: 'Non-Veg Biryani', badge: 'Bestseller' },{ id: 205, name: 'Spl.Chicken Biryani', price: 320, category: 'Non-Veg Biryani', badge: '' },{ id: 206, name: 'Chicken Family Pack', price: 700, category: 'Non-Veg Biryani', badge: '' },{ id: 207, name: 'Mutton Biryani', price: 290, category: 'Non-Veg Biryani', badge: '' },{ id: 208, name: 'Spl.Mutton Biryani', price: 370, category: 'Non-Veg Biryani', badge: '' },{ id: 209, name: 'Mutton Family Pack', price: 900, category: 'Non-Veg Biryani', badge: '' },{ id: 210, name: 'Fish Biryani', price: 250, category: 'Non-Veg Biryani', badge: '' },{ id: 211, name: 'Prawn Biryani', price: 300, category: 'Non-Veg Biryani', badge: '' },
+        { id: 212, name: 'Veg Biryani', price: 200, category: 'Veg Biryani', badge: '' },{ id: 213, name: 'Kaju Biryani', price: 260, category: 'Veg Biryani', badge: '' },{ id: 214, name: 'Paneer Biryani', price: 260, category: 'Veg Biryani', badge: '' },{ id: 215, name: 'Mushroom Biryani', price: 280, category: 'Veg Biryani', badge: '' },
+        { id: 216, name: 'Gavran Chicken Plate', price: 300, category: 'Handi', badge: '' },{ id: 217, name: 'Gavran Chicken Handi Full', price: 1200, category: 'Handi', badge: 'Signature' },{ id: 218, name: 'Gavran Chicken Handi Half', price: 650, category: 'Handi', badge: '' },{ id: 219, name: 'Broiler Chicken Handi Full', price: 900, category: 'Handi', badge: '' },{ id: 220, name: 'Broiler Chicken Handi Half', price: 500, category: 'Handi', badge: '' },{ id: 221, name: 'Mutton Handi Full', price: 1200, category: 'Handi', badge: '' },{ id: 222, name: 'Mutton Handi Half', price: 680, category: 'Handi', badge: '' },
+        { id: 223, name: 'Tandoor Roti', price: 20, category: 'Roti', badge: '' },{ id: 224, name: 'Butter Roti', price: 25, category: 'Roti', badge: '' },{ id: 225, name: 'Plain Naan', price: 40, category: 'Roti', badge: '' },{ id: 226, name: 'Butter Naan', price: 50, category: 'Roti', badge: '' },{ id: 227, name: 'Cheese Naan', price: 65, category: 'Roti', badge: '' },{ id: 228, name: 'Garlic Naan', price: 60, category: 'Roti', badge: '' },{ id: 229, name: 'Chapati', price: 15, category: 'Roti', badge: '' },{ id: 230, name: 'Butter Chapati', price: 20, category: 'Roti', badge: '' },{ id: 231, name: 'Phulka', price: 15, category: 'Roti', badge: '' },{ id: 232, name: 'Jawar Roti', price: 25, category: 'Roti', badge: '' },{ id: 233, name: 'Tawa Paratha', price: 25, category: 'Roti', badge: '' },{ id: 234, name: 'Tawa Butter Paratha', price: 30, category: 'Roti', badge: '' },{ id: 235, name: 'Lachcha Paratha', price: 40, category: 'Roti', badge: '' },{ id: 236, name: 'Plain kulcha', price: 65, category: 'Roti', badge: '' },{ id: 237, name: 'Paneer Kulcha', price: 75, category: 'Roti', badge: '' },{ id: 238, name: 'Masala Kulcha', price: 75, category: 'Roti', badge: '' },{ id: 239, name: 'Aloo Paratha', price: 70, category: 'Roti', badge: '' },{ id: 240, name: 'Roasted Papad', price: 15, category: 'Roti', badge: '' },{ id: 241, name: 'Fry Papad', price: 20, category: 'Roti', badge: '' },{ id: 242, name: 'Masala Papad', price: 25, category: 'Roti', badge: '' },{ id: 243, name: 'Tandur Roti Basket', price: 250, category: 'Roti', badge: '' },
+        { id: 244, name: 'Plain Dal', price: 100, category: 'Dal Menu', badge: '' },{ id: 245, name: 'Jeera Dal', price: 120, category: 'Dal Menu', badge: '' },{ id: 246, name: 'Dal Fry', price: 120, category: 'Dal Menu', badge: '' },{ id: 247, name: 'Dal Tadka', price: 130, category: 'Dal Menu', badge: '' },{ id: 248, name: 'Methi Dal Fry', price: 140, category: 'Dal Menu', badge: '' },{ id: 249, name: 'Butter Dal', price: 140, category: 'Dal Menu', badge: '' },
+        { id: 250, name: 'Plain Rice (Half)', price: 70, category: 'Rice & Noodles', badge: '' },{ id: 251, name: 'Plain Rice (Full)', price: 120, category: 'Rice & Noodles', badge: '' },{ id: 252, name: 'Steam Rice (Half)', price: 80, category: 'Rice & Noodles', badge: '' },{ id: 253, name: 'Steam Rice (Full)', price: 140, category: 'Rice & Noodles', badge: '' },{ id: 254, name: 'Jeera Rice (Half)', price: 90, category: 'Rice & Noodles', badge: '' },{ id: 255, name: 'Jeera Rice (Full)', price: 150, category: 'Rice & Noodles', badge: '' },{ id: 256, name: 'Garlic Rice', price: 170, category: 'Rice & Noodles', badge: '' },{ id: 257, name: 'Lemon Rice', price: 160, category: 'Rice & Noodles', badge: '' },{ id: 258, name: 'Masala Rice', price: 170, category: 'Rice & Noodles', badge: '' },{ id: 259, name: 'Curd Rice', price: 120, category: 'Rice & Noodles', badge: '' },{ id: 260, name: 'Dal Khichadi', price: 170, category: 'Rice & Noodles', badge: '' },{ id: 261, name: 'Veg Pulao', price: 180, category: 'Rice & Noodles', badge: '' },{ id: 262, name: 'Veg Fried Rice', price: 170, category: 'Rice & Noodles', badge: '' },{ id: 263, name: 'Mix Fried Rice', price: 240, category: 'Rice & Noodles', badge: '' },{ id: 264, name: 'Egg Fried Rice', price: 190, category: 'Rice & Noodles', badge: '' },{ id: 265, name: 'Chicken Fried Rice', price: 220, category: 'Rice & Noodles', badge: '' },{ id: 266, name: 'Veg Noodles', price: 150, category: 'Rice & Noodles', badge: '' },{ id: 267, name: 'Veg Hakka Noodles', price: 170, category: 'Rice & Noodles', badge: '' },{ id: 268, name: 'Schezwan Noodles', price: 170, category: 'Rice & Noodles', badge: '' },{ id: 269, name: 'Egg Noodles', price: 180, category: 'Rice & Noodles', badge: '' },{ id: 270, name: 'Chicken Noodles', price: 190, category: 'Rice & Noodles', badge: '' },{ id: 271, name: 'Chicken Hakka Noodles', price: 210, category: 'Rice & Noodles', badge: '' },{ id: 272, name: 'Chicken Hongkong Noodles', price: 230, category: 'Rice & Noodles', badge: '' },
+        { id: 273, name: 'Plain Raita', price: 50, category: 'Raita', badge: '' },{ id: 274, name: 'Onion Raita', price: 60, category: 'Raita', badge: '' },{ id: 275, name: 'Mixed Raita', price: 60, category: 'Raita', badge: '' },{ id: 276, name: 'Green Raita', price: 80, category: 'Raita', badge: '' },{ id: 277, name: 'Green Salad', price: 50, category: 'Raita', badge: '' },
+        { id: 278, name: 'Tea', price: 30, category: 'Hot Beverages', badge: '' },{ id: 279, name: 'Milk', price: 30, category: 'Hot Beverages', badge: '' },{ id: 280, name: 'Coffee', price: 40, category: 'Hot Beverages', badge: '' },{ id: 281, name: 'Green Tea', price: 40, category: 'Hot Beverages', badge: '' },
+        { id: 282, name: 'Water Bottle', price: 20, category: 'Soft Drinks', badge: '' },{ id: 283, name: 'Soft Drinks', price: 25, category: 'Soft Drinks', badge: '' },{ id: 284, name: 'Fresh Lime Soda', price: 50, category: 'Soft Drinks', badge: '' },{ id: 285, name: 'Lassi', price: 50, category: 'Soft Drinks', badge: '' },{ id: 286, name: 'Butter Milk', price: 50, category: 'Soft Drinks', badge: '' },{ id: 287, name: 'Cold Coffee', price: 100, category: 'Soft Drinks', badge: '' },
+        { id: 288, name: 'Thali', price: 350, category: 'Thali', badge: '' },{ id: 289, name: 'Spl.Thali', price: 450, category: 'Thali', badge: '' },{ id: 290, name: 'Deluxe Thali', price: 500, category: 'Thali', badge: 'Premium' },
+        { id: 291, name: 'Chocolate', price: 50, category: 'Ice-Cream', badge: '' },{ id: 292, name: 'Strawberry', price: 40, category: 'Ice-Cream', badge: '' },{ id: 293, name: 'Vanilla', price: 40, category: 'Ice-Cream', badge: '' },{ id: 294, name: 'Butterscotch', price: 50, category: 'Ice-Cream', badge: '' }
+      ];
 
-    // Non-Veg Soup
-    { id: 10, name: 'Chicken Corn Soup', price: 120, category: 'Non-Veg Soup', badge: '' },
-    { id: 11, name: 'Chicken Corn Soup 1/2', price: 150, category: 'Non-Veg Soup', badge: '' },
-    { id: 12, name: 'Chicken Hot & Sour Soup', price: 120, category: 'Non-Veg Soup', badge: '' },
-    { id: 13, name: 'Chicken Hot & Sour Soup 1/2', price: 150, category: 'Non-Veg Soup', badge: '' },
-    { id: 14, name: 'Chicken Manchow Soup', price: 120, category: 'Non-Veg Soup', badge: 'Bestseller' },
-    { id: 15, name: 'Chicken Manchow Soup 1/2', price: 150, category: 'Non-Veg Soup', badge: '' },
-    { id: 16, name: 'Chicken Egg Drop Soup', price: 160, category: 'Non-Veg Soup', badge: '' },
+      const categoriesList = ['Veg Soup', 'Non-Veg Soup', 'Veg Starter', 'Non-Veg Starter', 'Sea Food Starter', 'Veg Kabab', 'Non Veg Kabab', 'Veg Main Course', 'Paneer Main Course', 'Non-Veg Main Course', 'Mutton Main Course', 'Sea Food Main Course', 'Non-Veg Biryani', 'Veg Biryani', 'Handi', 'Roti', 'Dal Menu', 'Rice & Noodles', 'Raita', 'Hot Beverages', 'Soft Drinks', 'Thali', 'Ice-Cream'];
+      const catTitles = { 'Veg Soup':'🍲 Veg Soup','Non-Veg Soup':'🥣 Non-Veg Soup','Veg Starter':'🥗 Veg Starter','Non-Veg Starter':'🍗 Non-Veg Starter','Sea Food Starter':'🍤 Sea Food Starter','Veg Kabab':'🍢 Veg Kabab','Non Veg Kabab':'🍢 Non Veg Kabab','Veg Main Course':'🍛 Veg Main Course','Paneer Main Course':'🥘 Paneer Main Course','Non-Veg Main Course':'🍗 Non-Veg Main Course','Mutton Main Course':'🥩 Mutton Main Course','Sea Food Main Course':'🐟 Sea Food Main Course','Non-Veg Biryani':'🍚 Non-Veg Biryani','Veg Biryani':'🍚 Veg Biryani','Handi':'🍲 Handi','Roti':'🫓 Roti','Dal Menu':'🥣 Dal Menu','Rice & Noodles':'🍜 Rice & Noodles','Raita':'🥛 Raita','Hot Beverages':'☕ Hot Beverages','Soft Drinks':'🥤 Soft Drinks','Thali':'🍱 Thali','Ice-Cream':'🍨 Ice-Cream' };
+      const catIcons = { 'Veg Soup':'🍲','Non-Veg Soup':'🥣','Veg Starter':'🥗','Non-Veg Starter':'🍗','Sea Food Starter':'🍤','Veg Kabab':'🍢','Non Veg Kabab':'🍢','Veg Main Course':'🍛','Paneer Main Course':'🥘','Non-Veg Main Course':'🍗','Mutton Main Course':'🥩','Sea Food Main Course':'🐟','Non-Veg Biryani':'🍚','Veg Biryani':'🍚','Handi':'🍲','Roti':'🫓','Dal Menu':'🥣','Rice & Noodles':'🍜','Raita':'🥛','Hot Beverages':'☕','Soft Drinks':'🥤','Thali':'🍱','Ice-Cream':'🍨' };
 
-    // Veg Starter
-    { id: 17, name: 'Veg Manchurian Dry', price: 150, category: 'Veg Starter', badge: '' },
-    { id: 18, name: 'Veg Manchurian Wet', price: 160, category: 'Veg Starter', badge: '' },
-    { id: 19, name: 'Gobi Manchurian Dry', price: 150, category: 'Veg Starter', badge: '' },
-    { id: 20, name: 'Gobi Manchurian Wet', price: 160, category: 'Veg Starter', badge: '' },
-    { id: 21, name: 'Baby Corn Manchurian', price: 190, category: 'Veg Starter', badge: '' },
-    { id: 22, name: 'Baby Corn Chilli', price: 190, category: 'Veg Starter', badge: '' },
-    { id: 23, name: 'Baby Corn 65', price: 190, category: 'Veg Starter', badge: '' },
-    { id: 24, name: 'Baby Corn Pepper Fry', price: 220, category: 'Veg Starter', badge: '' },
-    { id: 25, name: 'Mushroom Chilli', price: 210, category: 'Veg Starter', badge: '' },
-    { id: 26, name: 'Mushroom Manchurian', price: 210, category: 'Veg Starter', badge: '' },
-    { id: 27, name: 'Mushroom 65', price: 210, category: 'Veg Starter', badge: '' },
-    { id: 28, name: 'Mushroom pepper Chilli Dry', price: 240, category: 'Veg Starter', badge: '' },
-    { id: 29, name: 'Veg Spring Roll', price: 250, category: 'Veg Starter', badge: '' },
-    { id: 30, name: 'Paneer 65', price: 220, category: 'Veg Starter', badge: '' },
-    { id: 31, name: 'Paneer Chilli', price: 230, category: 'Veg Starter', badge: '' },
-    { id: 32, name: 'Paneer Manchurian', price: 220, category: 'Veg Starter', badge: '' },
-    { id: 33, name: 'Paneer Kantaki', price: 240, category: 'Veg Starter', badge: '' },
-    { id: 34, name: 'Paneer kurkure', price: 260, category: 'Veg Starter', badge: '' },
-    { id: 35, name: 'Paneer Satay', price: 260, category: 'Veg Starter', badge: '' },
-    { id: 36, name: 'Paneer Dragon', price: 260, category: 'Veg Starter', badge: '' },
-    { id: 37, name: 'Paneer Majestice', price: 220, category: 'Veg Starter', badge: '' },
-    { id: 38, name: 'schezwan paneer', price: 220, category: 'Veg Starter', badge: '' },
-    { id: 39, name: 'Paneer Pakoda', price: 240, category: 'Veg Starter', badge: '' },
-    { id: 40, name: 'Veg 65', price: 180, category: 'Veg Starter', badge: '' },
-    { id: 41, name: 'Gobi 65', price: 200, category: 'Veg Starter', badge: '' },
-    { id: 42, name: 'Crispy Fried Corn', price: 190, category: 'Veg Starter', badge: '' },
-    { id: 43, name: 'Matki Fry', price: 110, category: 'Veg Starter', badge: '' },
-    { id: 44, name: 'Chana Roast', price: 110, category: 'Veg Starter', badge: '' },
-    { id: 45, name: 'Onion Pakoda', price: 110, category: 'Veg Starter', badge: '' },
-    { id: 46, name: 'Finger Chips', price: 120, category: 'Veg Starter', badge: '' },
-    { id: 47, name: 'Boil Peanut', price: 60, category: 'Veg Starter', badge: '' },
-    { id: 48, name: 'Chana Masalaa', price: 130, category: 'Veg Starter', badge: '' },
-    { id: 49, name: 'Lehsun Fry', price: 120, category: 'Veg Starter', badge: '' },
-    { id: 50, name: 'Mix Chinese Platter', price: 500, category: 'Veg Starter', badge: 'Signature' },
+      let cart = {};
 
-    // Non-Veg Starter
-    { id: 51, name: 'Chicken Lollipop (6pic)', price: 320, category: 'Non-Veg Starter', badge: 'Bestseller' },
-    { id: 52, name: 'Chicken Lollipop (3pic)', price: 170, category: 'Non-Veg Starter', badge: '' },
-    { id: 53, name: 'Chicken Drumsticks (6pic)', price: 320, category: 'Non-Veg Starter', badge: '' },
-    { id: 54, name: 'Chicken Drumsticks (3pic)', price: 170, category: 'Non-Veg Starter', badge: '' },
-    { id: 55, name: 'Chicken Spring Roll', price: 270, category: 'Non-Veg Starter', badge: '' },
-    { id: 56, name: 'Chicken Chilli', price: 250, category: 'Non-Veg Starter', badge: '' },
-    { id: 57, name: 'Chicken 65', price: 240, category: 'Non-Veg Starter', badge: '' },
-    { id: 58, name: 'Chicken Manchurian', price: 240, category: 'Non-Veg Starter', badge: '' },
-    { id: 59, name: 'Chicken 555', price: 280, category: 'Non-Veg Starter', badge: '' },
-    { id: 60, name: 'Chicken Majestic', price: 280, category: 'Non-Veg Starter', badge: '' },
-    { id: 61, name: 'Chicken Lemon', price: 260, category: 'Non-Veg Starter', badge: '' },
-    { id: 62, name: 'Pepper Chicken', price: 280, category: 'Non-Veg Starter', badge: '' },
-    { id: 63, name: 'Chicken Kentucky', price: 260, category: 'Non-Veg Starter', badge: '' },
-    { id: 64, name: 'Chicken Kurkure', price: 320, category: 'Non-Veg Starter', badge: '' },
-    { id: 65, name: 'Slice Chicken', price: 280, category: 'Non-Veg Starter', badge: '' },
-    { id: 66, name: 'Chicken Wings', price: 210, category: 'Non-Veg Starter', badge: '' },
-    { id: 67, name: 'garlic Chicken', price: 260, category: 'Non-Veg Starter', badge: '' },
-    { id: 68, name: 'Chicken roasted', price: 250, category: 'Non-Veg Starter', badge: '' },
-    { id: 69, name: 'Schezwan Chicken', price: 260, category: 'Non-Veg Starter', badge: '' },
-    { id: 70, name: 'Chicken Honkong', price: 280, category: 'Non-Veg Starter', badge: '' },
-    { id: 71, name: 'Chicken Satay', price: 290, category: 'Non-Veg Starter', badge: '' },
-
-    // Sea Food Starters
-    { id: 72, name: 'Apollo Fish', price: 280, category: 'Sea Food Starter', badge: '' },
-    { id: 73, name: 'Chilli Fish', price: 250, category: 'Sea Food Starter', badge: '' },
-    { id: 74, name: 'Fish Manchurian', price: 250, category: 'Sea Food Starter', badge: '' },
-    { id: 75, name: 'Fish 65', price: 250, category: 'Sea Food Starter', badge: '' },
-    { id: 76, name: 'Fish Roast', price: 180, category: 'Sea Food Starter', badge: '' },
-    { id: 77, name: 'Loose Prawns', price: 320, category: 'Sea Food Starter', badge: '' },
-    { id: 78, name: 'Chilli Prawns', price: 320, category: 'Sea Food Starter', badge: '' },
-    { id: 79, name: 'Prawns Manchurian', price: 320, category: 'Sea Food Starter', badge: '' },
-    { id: 80, name: 'Prawns 65', price: 320, category: 'Sea Food Starter', badge: '' },
-    { id: 81, name: 'Fried Prawns', price: 350, category: 'Sea Food Starter', badge: '' },
-
-    // Tandoori Starter Veg Kabab
-    { id: 82, name: 'Paneer Tikka', price: 240, category: 'Veg Kabab', badge: '' },
-    { id: 83, name: 'Paneer Malai Tikka', price: 250, category: 'Veg Kabab', badge: '' },
-    { id: 84, name: 'Hara Bhara Kababs', price: 220, category: 'Veg Kabab', badge: '' },
-    { id: 85, name: 'Achari Paneer Tikka', price: 250, category: 'Veg Kabab', badge: '' },
-    { id: 86, name: 'Paneer Banjara', price: 260, category: 'Veg Kabab', badge: '' },
-    { id: 87, name: 'Paneer Reshmi Kabab', price: 260, category: 'Veg Kabab', badge: '' },
-    { id: 88, name: 'Paneer Kali Mirch', price: 260, category: 'Veg Kabab', badge: '' },
-    { id: 89, name: 'Paneer Pahadi Kabab', price: 260, category: 'Veg Kabab', badge: '' },
-    { id: 90, name: 'Veg Tandoor Platter', price: 1200, category: 'Veg Kabab', badge: 'Chef Special' },
-
-    // Non Veg Kababs
-    { id: 91, name: 'Tandoori Chicken Full', price: 480, category: 'Non Veg Kabab', badge: '' },
-    { id: 92, name: 'Tandoori Chicken Half', price: 270, category: 'Non Veg Kabab', badge: '' },
-    { id: 93, name: 'Tangdi Kabab Full', price: 550, category: 'Non Veg Kabab', badge: '' },
-    { id: 94, name: 'Tangdi Kabab Half', price: 300, category: 'Non Veg Kabab', badge: '' },
-    { id: 95, name: 'Chicken Tikka', price: 280, category: 'Non Veg Kabab', badge: 'Bestseller' },
-    { id: 96, name: 'Chicken Reshmi Kabab', price: 300, category: 'Non Veg Kabab', badge: '' },
-    { id: 97, name: 'Chicken Banjara Kabab', price: 290, category: 'Non Veg Kabab', badge: '' },
-    { id: 98, name: 'Chicken Pahadi Kabab', price: 290, category: 'Non Veg Kabab', badge: '' },
-    { id: 99, name: 'Chicken Malai Kabab', price: 290, category: 'Non Veg Kabab', badge: '' },
-    { id: 100, name: 'Chicken Achari Kabab', price: 290, category: 'Non Veg Kabab', badge: '' },
-    { id: 101, name: 'Chicken Kali Mirch Kabab', price: 300, category: 'Non Veg Kabab', badge: '' },
-    { id: 102, name: 'Tiranga Kabab', price: 380, category: 'Non Veg Kabab', badge: '' },
-    { id: 103, name: 'Nonveg Tandoor Platter', price: 1400, category: 'Non Veg Kabab', badge: 'Signature' },
-
-    // Veg Main Course
-    { id: 104, name: 'Aloo Gobi', price: 180, category: 'Veg Main Course', badge: '' },
-    { id: 105, name: 'Bhendi Fry Masala', price: 180, category: 'Veg Main Course', badge: '' },
-    { id: 106, name: 'Baingan Masala/Bharta', price: 180, category: 'Veg Main Course', badge: '' },
-    { id: 107, name: 'Baby Corn Mushroom Curry', price: 250, category: 'Veg Main Course', badge: '' },
-    { id: 108, name: 'Mix Veg Curry', price: 180, category: 'Veg Main Course', badge: '' },
-    { id: 109, name: 'Methi Malai', price: 230, category: 'Veg Main Course', badge: '' },
-    { id: 110, name: 'Mutter Mushroom', price: 220, category: 'Veg Main Course', badge: '' },
-    { id: 111, name: 'Veg Kolhapuri', price: 190, category: 'Veg Main Course', badge: '' },
-    { id: 112, name: 'Veg Handi', price: 180, category: 'Veg Main Course', badge: '' },
-    { id: 113, name: 'Veg Kadhai', price: 190, category: 'Veg Main Course', badge: '' },
-    { id: 114, name: 'Veg Deewani Handi', price: 200, category: 'Veg Main Course', badge: '' },
-    { id: 115, name: 'Veg Hydrabadi', price: 200, category: 'Veg Main Course', badge: '' },
-    { id: 116, name: 'Veg Do Pyaza', price: 190, category: 'Veg Main Course', badge: '' },
-    { id: 117, name: 'Veg Chatpata', price: 210, category: 'Veg Main Course', badge: '' },
-    { id: 118, name: 'Veg Jaipuri', price: 210, category: 'Veg Main Course', badge: '' },
-    { id: 119, name: 'Veg Bhuna Masala', price: 230, category: 'Veg Main Course', badge: '' },
-    { id: 120, name: 'Lehsuni Palak', price: 220, category: 'Veg Main Course', badge: '' },
-    { id: 121, name: 'Lehsuni Methi', price: 220, category: 'Veg Main Course', badge: '' },
-    { id: 122, name: 'Veg Kofta', price: 250, category: 'Veg Main Course', badge: '' },
-    { id: 123, name: 'Paneer Kofta', price: 250, category: 'Veg Main Course', badge: '' },
-    { id: 124, name: 'Malai Kofta', price: 250, category: 'Veg Main Course', badge: '' },
-    { id: 125, name: 'Plain Palak', price: 180, category: 'Veg Main Course', badge: '' },
-    { id: 126, name: 'Tomato Chutney', price: 170, category: 'Veg Main Course', badge: '' },
-    { id: 127, name: 'Chana Masala', price: 190, category: 'Veg Main Course', badge: '' },
-    { id: 128, name: 'Rajma Masala', price: 190, category: 'Veg Main Course', badge: '' },
-    { id: 129, name: 'Gobi Masala', price: 190, category: 'Veg Main Course', badge: '' },
-    { id: 130, name: 'Tawa Besan', price: 170, category: 'Veg Main Course', badge: '' },
-    { id: 131, name: 'Besan', price: 160, category: 'Veg Main Course', badge: '' },
-    { id: 132, name: 'Shev Bhaji', price: 160, category: 'Veg Main Course', badge: '' },
-    { id: 133, name: 'Veg Gravy', price: 170, category: 'Veg Main Course', badge: '' },
-
-    // Paneer Main Course
-    { id: 134, name: 'Paneer Butter Masala', price: 240, category: 'Paneer Main Course', badge: 'Bestseller' },
-    { id: 135, name: 'Paneer Tikka Masala', price: 260, category: 'Paneer Main Course', badge: '' },
-    { id: 136, name: 'Paneer Maharaja', price: 270, category: 'Paneer Main Course', badge: 'Signature' },
-    { id: 137, name: 'Paneer Lajjatdar', price: 260, category: 'Paneer Main Course', badge: '' },
-    { id: 138, name: 'Paneer Kadai', price: 250, category: 'Paneer Main Course', badge: '' },
-    { id: 139, name: 'Paneer Shahi', price: 260, category: 'Paneer Main Course', badge: '' },
-    { id: 140, name: 'Paneer Do Pyaza', price: 250, category: 'Paneer Main Course', badge: '' },
-    { id: 141, name: 'Palak Paneer', price: 220, category: 'Paneer Main Course', badge: '' },
-    { id: 142, name: 'Paneer Chatpata', price: 250, category: 'Paneer Main Course', badge: '' },
-    { id: 143, name: 'Paneer Kolhapuri', price: 250, category: 'Paneer Main Course', badge: '' },
-    { id: 144, name: 'Paneer Hyderabadi', price: 260, category: 'Paneer Main Course', badge: '' },
-    { id: 145, name: 'Paneer Punjabi', price: 260, category: 'Paneer Main Course', badge: '' },
-    { id: 146, name: 'Kaju Paneer', price: 280, category: 'Paneer Main Course', badge: '' },
-    { id: 147, name: 'Kaju Curry/Masala', price: 290, category: 'Paneer Main Course', badge: '' },
-    { id: 148, name: 'Mushroom Paneer', price: 290, category: 'Paneer Main Course', badge: '' },
-    { id: 149, name: 'Mushroom Curry/Masala', price: 280, category: 'Paneer Main Course', badge: '' },
-    { id: 150, name: 'Paneer Nawabi', price: 300, category: 'Paneer Main Course', badge: '' },
-    { id: 151, name: 'Paneer Shahi Korma', price: 290, category: 'Paneer Main Course', badge: '' },
-    { id: 152, name: 'Methi Chaman', price: 300, category: 'Paneer Main Course', badge: '' },
-    { id: 153, name: 'Paneer Bhurji', price: 280, category: 'Paneer Main Course', badge: '' },
-    { id: 154, name: 'Veg Gravy Kaju', price: 200, category: 'Paneer Main Course', badge: '' },
-    { id: 155, name: 'Paneer Masala', price: 210, category: 'Paneer Main Course', badge: '' },
-    { id: 156, name: 'Methi Paneer', price: 240, category: 'Paneer Main Course', badge: '' },
-    { id: 157, name: 'Mutter Paneer', price: 260, category: 'Paneer Main Course', badge: '' },
-
-    // Non-Veg Main Course (Chicken & Egg)
-    { id: 158, name: 'Butter Chicken (Boneless)', price: 280, category: 'Non-Veg Main Course', badge: 'Bestseller' },
-    { id: 159, name: 'Chicken Tikka Masala', price: 290, category: 'Non-Veg Main Course', badge: '' },
-    { id: 160, name: 'Chicken Curry', price: 250, category: 'Non-Veg Main Course', badge: '' },
-    { id: 161, name: 'Chicken lapeta', price: 250, category: 'Non-Veg Main Course', badge: '' },
-    { id: 162, name: 'Chicken Kadai', price: 280, category: 'Non-Veg Main Course', badge: '' },
-    { id: 163, name: 'Chicken Do Pyaza', price: 260, category: 'Non-Veg Main Course', badge: '' },
-    { id: 164, name: 'Chicken Adraki', price: 280, category: 'Non-Veg Main Course', badge: '' },
-    { id: 165, name: 'Chicken Rada Masala', price: 290, category: 'Non-Veg Main Course', badge: '' },
-    { id: 166, name: 'Chicken Afgani Masala', price: 300, category: 'Non-Veg Main Course', badge: '' },
-    { id: 167, name: 'Dum Ka Chicken', price: 320, category: 'Non-Veg Main Course', badge: '' },
-    { id: 168, name: 'Methi Chicken', price: 300, category: 'Non-Veg Main Course', badge: '' },
-    { id: 169, name: 'Chicken Mughlai', price: 300, category: 'Non-Veg Main Course', badge: '' },
-    { id: 170, name: 'Andhra Chicken', price: 290, category: 'Non-Veg Main Course', badge: '' },
-    { id: 171, name: 'Chicken Kolhapuri', price: 290, category: 'Non-Veg Main Course', badge: '' },
-    { id: 172, name: 'Chicken Hydrabadi', price: 290, category: 'Non-Veg Main Course', badge: '' },
-    { id: 173, name: 'Chicken Nawabi', price: 310, category: 'Non-Veg Main Course', badge: '' },
-    { id: 174, name: 'Chicken Punjabi', price: 310, category: 'Non-Veg Main Course', badge: '' },
-    { id: 175, name: 'Chicken Achari Curry', price: 280, category: 'Non-Veg Main Course', badge: '' },
-    { id: 176, name: 'Chicken Masala', price: 280, category: 'Non-Veg Main Course', badge: '' },
-    { id: 177, name: 'Egg Boil', price: 40, category: 'Non-Veg Main Course', badge: '' },
-    { id: 178, name: 'Egg Boil Fry', price: 60, category: 'Non-Veg Main Course', badge: '' },
-    { id: 179, name: 'Egg Omelette', price: 90, category: 'Non-Veg Main Course', badge: '' },
-    { id: 180, name: 'Egg Curry', price: 150, category: 'Non-Veg Main Course', badge: '' },
-    { id: 181, name: 'Egg Masala', price: 170, category: 'Non-Veg Main Course', badge: '' },
-    { id: 182, name: 'Egg Bhurji', price: 130, category: 'Non-Veg Main Course', badge: '' },
-
-    // Mutton Main Course
-    { id: 183, name: 'Mutton Curry', price: 270, category: 'Mutton Main Course', badge: '' },
-    { id: 184, name: 'Mutton Masala', price: 290, category: 'Mutton Main Course', badge: '' },
-    { id: 185, name: 'Andhra Mutton', price: 300, category: 'Mutton Main Course', badge: '' },
-    { id: 186, name: 'Mutton Mughlai', price: 300, category: 'Mutton Main Course', badge: '' },
-    { id: 187, name: 'Mutton Afghani', price: 300, category: 'Mutton Main Course', badge: '' },
-    { id: 188, name: 'Mutton Do Pyaza', price: 280, category: 'Mutton Main Course', badge: '' },
-    { id: 189, name: 'Mutton Kali Mirch', price: 280, category: 'Mutton Main Course', badge: '' },
-    { id: 190, name: 'Mutton Fry', price: 290, category: 'Mutton Main Course', badge: '' },
-    { id: 191, name: 'Achari Mutton', price: 280, category: 'Mutton Main Course', badge: '' },
-    { id: 192, name: 'Methi Mutton', price: 290, category: 'Mutton Main Course', badge: '' },
-    { id: 193, name: 'Mutton Kolhapuri', price: 300, category: 'Mutton Main Course', badge: '' },
-    { id: 194, name: 'Mutton Hydrabadi', price: 310, category: 'Mutton Main Course', badge: '' },
-    { id: 195, name: 'Mutton Kheema', price: 330, category: 'Mutton Main Course', badge: '' },
-    { id: 196, name: 'Mutton Korma', price: 330, category: 'Mutton Main Course', badge: '' },
-
-    // Sea Food Main Course
-    { id: 197, name: 'Fish Curry', price: 290, category: 'Sea Food Main Course', badge: '' },
-    { id: 198, name: 'Fish Fry', price: 290, category: 'Sea Food Main Course', badge: '' },
-    { id: 199, name: 'Fish Masala', price: 290, category: 'Sea Food Main Course', badge: '' },
-    { id: 200, name: 'Prawn Curry', price: 320, category: 'Sea Food Main Course', badge: '' },
-    { id: 201, name: 'Prawn Fry', price: 320, category: 'Sea Food Main Course', badge: '' },
-    { id: 202, name: 'Prawn masala', price: 320, category: 'Sea Food Main Course', badge: '' },
-
-    // Non-Veg Biryani
-    { id: 203, name: 'Egg Biryani', price: 230, category: 'Non-Veg Biryani', badge: '' },
-    { id: 204, name: 'Chicken Biryani', price: 270, category: 'Non-Veg Biryani', badge: 'Bestseller' },
-    { id: 205, name: 'Spl.Chicken Biryani', price: 320, category: 'Non-Veg Biryani', badge: '' },
-    { id: 206, name: 'Chicken Family Pack', price: 700, category: 'Non-Veg Biryani', badge: '' },
-    { id: 207, name: 'Mutton Biryani', price: 290, category: 'Non-Veg Biryani', badge: '' },
-    { id: 208, name: 'Spl.Mutton Biryani', price: 370, category: 'Non-Veg Biryani', badge: '' },
-    { id: 209, name: 'Mutton Family Pack', price: 900, category: 'Non-Veg Biryani', badge: '' },
-    { id: 210, name: 'Fish Biryani', price: 250, category: 'Non-Veg Biryani', badge: '' },
-    { id: 211, name: 'Prawn Biryani', price: 300, category: 'Non-Veg Biryani', badge: '' },
-
-    // Veg Biryani
-    { id: 212, name: 'Veg Biryani', price: 200, category: 'Veg Biryani', badge: '' },
-    { id: 213, name: 'Kaju Biryani', price: 260, category: 'Veg Biryani', badge: '' },
-    { id: 214, name: 'Paneer Biryani', price: 260, category: 'Veg Biryani', badge: '' },
-    { id: 215, name: 'Mushroom Biryani', price: 280, category: 'Veg Biryani', badge: '' },
-
-    // Handi
-    { id: 216, name: 'Gavran Chicken Plate', price: 300, category: 'Handi', badge: '' },
-    { id: 217, name: 'Gavran Chicken Handi Full', price: 1200, category: 'Handi', badge: 'Signature' },
-    { id: 218, name: 'Gavran Chicken Handi Half', price: 650, category: 'Handi', badge: '' },
-    { id: 219, name: 'Broiler Chicken Handi Full', price: 900, category: 'Handi', badge: '' },
-    { id: 220, name: 'Broiler Chicken Handi Half', price: 500, category: 'Handi', badge: '' },
-    { id: 221, name: 'Mutton Handi Full', price: 1200, category: 'Handi', badge: '' },
-    { id: 222, name: 'Mutton Handi Half', price: 680, category: 'Handi', badge: '' },
-
-    // Roti
-    { id: 223, name: 'Tandoor Roti', price: 20, category: 'Roti', badge: '' },
-    { id: 224, name: 'Butter Roti', price: 25, category: 'Roti', badge: '' },
-    { id: 225, name: 'Plain Naan', price: 40, category: 'Roti', badge: '' },
-    { id: 226, name: 'Butter Naan', price: 50, category: 'Roti', badge: '' },
-    { id: 227, name: 'Cheese Naan', price: 65, category: 'Roti', badge: '' },
-    { id: 228, name: 'Garlic Naan', price: 60, category: 'Roti', badge: '' },
-    { id: 229, name: 'Chapati', price: 15, category: 'Roti', badge: '' },
-    { id: 230, name: 'Butter Chapati', price: 20, category: 'Roti', badge: '' },
-    { id: 231, name: 'Phulka', price: 15, category: 'Roti', badge: '' },
-    { id: 232, name: 'Jawar Roti', price: 25, category: 'Roti', badge: '' },
-    { id: 233, name: 'Tawa Paratha', price: 25, category: 'Roti', badge: '' },
-    { id: 234, name: 'Tawa Butter Paratha', price: 30, category: 'Roti', badge: '' },
-    { id: 235, name: 'Lachcha Paratha', price: 40, category: 'Roti', badge: '' },
-    { id: 236, name: 'Plain kulcha', price: 65, category: 'Roti', badge: '' },
-    { id: 237, name: 'Paneer Kulcha', price: 75, category: 'Roti', badge: '' },
-    { id: 238, name: 'Masala Kulcha', price: 75, category: 'Roti', badge: '' },
-    { id: 239, name: 'Aloo Paratha', price: 70, category: 'Roti', badge: '' },
-    { id: 240, name: 'Roasted Papad', price: 15, category: 'Roti', badge: '' },
-    { id: 241, name: 'Fry Papad', price: 20, category: 'Roti', badge: '' },
-    { id: 242, name: 'Masala Papad', price: 25, category: 'Roti', badge: '' },
-    { id: 243, name: 'Tandur Roti Basket', price: 250, category: 'Roti', badge: '' },
-
-    // Dal Menu
-    { id: 244, name: 'Plain Dal', price: 100, category: 'Dal Menu', badge: '' },
-    { id: 245, name: 'Jeera Dal', price: 120, category: 'Dal Menu', badge: '' },
-    { id: 246, name: 'Dal Fry', price: 120, category: 'Dal Menu', badge: '' },
-    { id: 247, name: 'Dal Tadka', price: 130, category: 'Dal Menu', badge: '' },
-    { id: 248, name: 'Methi Dal Fry', price: 140, category: 'Dal Menu', badge: '' },
-    { id: 249, name: 'Butter Dal', price: 140, category: 'Dal Menu', badge: '' },
-
-    // Rice & Noodles
-    { id: 250, name: 'Plain Rice (Half)', price: 70, category: 'Rice & Noodles', badge: '' },
-    { id: 251, name: 'Plain Rice (Full)', price: 120, category: 'Rice & Noodles', badge: '' },
-    { id: 252, name: 'Steam Rice (Half)', price: 80, category: 'Rice & Noodles', badge: '' },
-    { id: 253, name: 'Steam Rice (Full)', price: 140, category: 'Rice & Noodles', badge: '' },
-    { id: 254, name: 'Jeera Rice (Half)', price: 90, category: 'Rice & Noodles', badge: '' },
-    { id: 255, name: 'Jeera Rice (Full)', price: 150, category: 'Rice & Noodles', badge: '' },
-    { id: 256, name: 'Garlic Rice', price: 170, category: 'Rice & Noodles', badge: '' },
-    { id: 257, name: 'Lemon Rice', price: 160, category: 'Rice & Noodles', badge: '' },
-    { id: 258, name: 'Masala Rice', price: 170, category: 'Rice & Noodles', badge: '' },
-    { id: 259, name: 'Curd Rice', price: 120, category: 'Rice & Noodles', badge: '' },
-    { id: 260, name: 'Dal Khichadi', price: 170, category: 'Rice & Noodles', badge: '' },
-    { id: 261, name: 'Veg Pulao', price: 180, category: 'Rice & Noodles', badge: '' },
-    { id: 262, name: 'Veg Fried Rice', price: 170, category: 'Rice & Noodles', badge: '' },
-    { id: 263, name: 'Mix Fried Rice', price: 240, category: 'Rice & Noodles', badge: '' },
-    { id: 264, name: 'Egg Fried Rice', price: 190, category: 'Rice & Noodles', badge: '' },
-    { id: 265, name: 'Chicken Fried Rice', price: 220, category: 'Rice & Noodles', badge: '' },
-    { id: 266, name: 'Veg Noodles', price: 150, category: 'Rice & Noodles', badge: '' },
-    { id: 267, name: 'Veg Hakka Noodles', price: 170, category: 'Rice & Noodles', badge: '' },
-    { id: 268, name: 'Schezwan Noodles', price: 170, category: 'Rice & Noodles', badge: '' },
-    { id: 269, name: 'Egg Noodles', price: 180, category: 'Rice & Noodles', badge: '' },
-    { id: 270, name: 'Chicken Noodles', price: 190, category: 'Rice & Noodles', badge: '' },
-    { id: 271, name: 'Chicken Hakka Noodles', price: 210, category: 'Rice & Noodles', badge: '' },
-    { id: 272, name: 'Chicken Hongkong Noodles', price: 230, category: 'Rice & Noodles', badge: '' },
-
-    // Raita & Salad
-    { id: 273, name: 'Plain Raita', price: 50, category: 'Raita', badge: '' },
-    { id: 274, name: 'Onion Raita', price: 60, category: 'Raita', badge: '' },
-    { id: 275, name: 'Mixed Raita', price: 60, category: 'Raita', badge: '' },
-    { id: 276, name: 'Green Raita', price: 80, category: 'Raita', badge: '' },
-    { id: 277, name: 'Green Salad', price: 50, category: 'Raita', badge: '' },
-
-    // Hot Beverages
-    { id: 278, name: 'Tea', price: 30, category: 'Hot Beverages', badge: '' },
-    { id: 279, name: 'Milk', price: 30, category: 'Hot Beverages', badge: '' },
-    { id: 280, name: 'Coffee', price: 40, category: 'Hot Beverages', badge: '' },
-    { id: 281, name: 'Green Tea', price: 40, category: 'Hot Beverages', badge: '' },
-
-    // Soft Drinks
-    { id: 282, name: 'Water Bottle', price: 20, category: 'Soft Drinks', badge: '' },
-    { id: 283, name: 'Soft Drinks', price: 25, category: 'Soft Drinks', badge: '' },
-    { id: 284, name: 'Fresh Lime Soda', price: 50, category: 'Soft Drinks', badge: '' },
-    { id: 285, name: 'Lassi', price: 50, category: 'Soft Drinks', badge: '' },
-    { id: 286, name: 'Butter Milk', price: 50, category: 'Soft Drinks', badge: '' },
-    { id: 287, name: 'Cold Coffee', price: 100, category: 'Soft Drinks', badge: '' },
-
-    // Party-Thaliz
-    { id: 288, name: 'Thali', price: 350, category: 'Thali', badge: '' },
-    { id: 289, name: 'Spl.Thali', price: 450, category: 'Thali', badge: '' },
-    { id: 290, name: 'Deluxe Thali', price: 500, category: 'Thali', badge: 'Premium' },
-
-    // Ice-Cream
-    { id: 291, name: 'Chocolate', price: 50, category: 'Ice-Cream', badge: '' },
-    { id: 292, name: 'Strawberry', price: 40, category: 'Ice-Cream', badge: '' },
-    { id: 293, name: 'Vanilla', price: 40, category: 'Ice-Cream', badge: '' },
-    { id: 294, name: 'Butterscotch', price: 50, category: 'Ice-Cream', badge: '' }
-];
-
-const categories = [
-    'Veg Soup', 'Non-Veg Soup', 'Veg Starter', 'Non-Veg Starter', 'Sea Food Starter',
-    'Veg Kabab', 'Non Veg Kabab', 'Veg Main Course', 'Paneer Main Course',
-    'Non-Veg Main Course', 'Mutton Main Course', 'Sea Food Main Course',
-    'Non-Veg Biryani', 'Veg Biryani', 'Handi', 'Roti', 'Dal Menu',
-    'Rice & Noodles', 'Raita', 'Hot Beverages', 'Soft Drinks', 'Thali', 'Ice-Cream'
-];
-
-const categoryTitles = {
-    'Veg Soup': '🍲 Veg Soup',
-    'Non-Veg Soup': '🥣 Non-Veg Soup',
-    'Veg Starter': '🥗 Veg Starter',
-    'Non-Veg Starter': '🍗 Non-Veg Starter',
-    'Sea Food Starter': '🍤 Sea Food Starter',
-    'Veg Kabab': '🍢 Veg Kabab',
-    'Non Veg Kabab': '🍢 Non Veg Kabab',
-    'Veg Main Course': '🍛 Veg Main Course',
-    'Paneer Main Course': '🥘 Paneer Main Course',
-    'Non-Veg Main Course': '🍗 Non-Veg Main Course',
-    'Mutton Main Course': '🥩 Mutton Main Course',
-    'Sea Food Main Course': '🐟 Sea Food Main Course',
-    'Non-Veg Biryani': '🍚 Non-Veg Biryani',
-    'Veg Biryani': '🍚 Veg Biryani',
-    'Handi': '🍲 Handi',
-    'Roti': '🫓 Roti',
-    'Dal Menu': '🥣 Dal Menu',
-    'Rice & Noodles': '🍜 Rice & Noodles',
-    'Raita': '🥛 Raita',
-    'Hot Beverages': '☕ Hot Beverages',
-    'Soft Drinks': '🥤 Soft Drinks',
-    'Thali': '🍱 Thali',
-    'Ice-Cream': '🍨 Ice-Cream'
-};
-
-const categoryIcons = {
-    'Veg Soup': '🍲',
-    'Non-Veg Soup': '🥣',
-    'Veg Starter': '🥗',
-    'Non-Veg Starter': '🍗',
-    'Sea Food Starter': '🍤',
-    'Veg Kabab': '🍢',
-    'Non Veg Kabab': '🍢',
-    'Veg Main Course': '🍛',
-    'Paneer Main Course': '🥘',
-    'Non-Veg Main Course': '🍗',
-    'Mutton Main Course': '🥩',
-    'Sea Food Main Course': '🐟',
-    'Non-Veg Biryani': '🍚',
-    'Veg Biryani': '🍚',
-    'Handi': '🍲',
-    'Roti': '🫓',
-    'Dal Menu': '🥣',
-    'Rice & Noodles': '🍜',
-    'Raita': '🥛',
-    'Hot Beverages': '☕',
-    'Soft Drinks': '🥤',
-    'Thali': '🍱',
-    'Ice-Cream': '🍨'
-};
-
-let cart = {};
-
-      // DOM elements
-      const categoryBar = document.getElementById('categoryBar');
-      const menuContainer = document.getElementById('menuContainer');
-      const cartBadge = document.getElementById('cartBadge');
-      const cartPanel = document.getElementById('cartPanel');
-      const closeCartBtn = document.getElementById('closeCartBtn');
-      const cartFloatBtn = document.getElementById('cartFloatBtn');
-      const cartItemsContainer = document.getElementById('cartItemsContainer');
-      const cartTotalEl = document.getElementById('cartTotal');
-      const tableNumberInput = document.getElementById('tableNumber');
-      const placeOrderBtn = document.getElementById('placeOrderBtn');
-      const whatsappFloat = document.getElementById('whatsappFloat');
-
-      function renderCategoryBar() {
-        categoryBar.innerHTML = categories.map(cat => 
-          `<button class="cat-pill" data-category="${cat}">
-            <span>${categoryIcons[cat]}</span> ${categoryTitles[cat]}
-          </button>`
-        ).join('');
-        const first = categoryBar.querySelector('.cat-pill');
-        if (first) first.classList.add('active');
+      function renderCategories() {
+        const bar = document.getElementById('categoryBar');
+        bar.innerHTML = categoriesList.map(c => `<button class="cat-pill" data-category="${c}"><span>${catIcons[c]}</span> ${catTitles[c]}</button>`).join('');
+        if(bar.firstChild) bar.firstChild.classList.add('active');
       }
 
-      function renderMenu(scrollToCat = null) {
+      function renderMenu(highlightCat = null) {
         let html = '';
-        categories.forEach(cat => {
+        categoriesList.forEach(cat => {
           const items = menuItems.filter(i => i.category === cat);
-          html += `<div class="category-section" id="cat-${cat}">`;
-          html += `<div class="category-title">
-            <span>${categoryIcons[cat]}</span> ${categoryTitles[cat]}
-          </div>`;
+          if(items.length === 0) return;
+          html += `<div class="category-section" id="cat-${cat}"><div class="category-title"><span>${catIcons[cat]}</span> ${catTitles[cat]}</div>`;
           items.forEach(item => {
             const qty = cart[item.id] || 0;
-            html += `
-              <div class="menu-row">
-                <span class="item-name" title="${item.name}">
-                  <span class="veg-icon">🍽️</span> ${item.name}
-                  ${item.badge ? `<span class="badge">${item.badge}</span>` : ''}
-                </span>
-                <span class="item-price">₹${item.price}</span>
-                <div class="cart-cell">
-                  ${qty > 0 ? `
-                    <button class="qty-btn dec" data-id="${item.id}">−</button>
-                    <span class="qty-val">${qty}</span>
-                    <button class="qty-btn inc" data-id="${item.id}">+</button>
-                  ` : `
-                    <button class="add-single add-btn" data-id="${item.id}">+</button>
-                  `}
-                </div>
-              </div>
-            `;
+            html += `<div class="menu-row"><span class="item-name"><span class="veg-icon">🍽️</span> ${item.name}${item.badge ? `<span class="badge">${item.badge}</span>` : ''}</span><span class="item-price">₹${item.price}</span><div class="cart-cell">`;
+            if(qty > 0) {
+              html += `<button class="qty-btn dec" data-id="${item.id}">−</button><span class="qty-val">${qty}</span><button class="qty-btn inc" data-id="${item.id}">+</button>`;
+            } else {
+              html += `<button class="add-single add-btn" data-id="${item.id}">+</button>`;
+            }
+            html += `</div></div>`;
           });
           html += `</div>`;
         });
-        menuContainer.innerHTML = html;
-
-        document.querySelectorAll('.add-btn').forEach(b => b.addEventListener('click', (e) => addItem(e.currentTarget.dataset.id)));
-        document.querySelectorAll('.dec').forEach(b => b.addEventListener('click', (e) => decreaseItem(e.currentTarget.dataset.id)));
-        document.querySelectorAll('.inc').forEach(b => b.addEventListener('click', (e) => increaseItem(e.currentTarget.dataset.id)));
-
-        if (scrollToCat) {
-          const el = document.getElementById(`cat-${scrollToCat}`);
-          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+        document.getElementById('menuContainer').innerHTML = html;
+        attachMenuEvents();
+        if(highlightCat) document.getElementById(`cat-${highlightCat}`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
 
-      function addItem(id) { cart[id] = (cart[id] || 0) + 1; refreshUI(); }
-      function increaseItem(id) { cart[id] = (cart[id] || 0) + 1; refreshUI(); }
-      function decreaseItem(id) {
-        if (cart[id] && cart[id] > 1) cart[id]--;
-        else delete cart[id];
-        refreshUI();
+      function attachMenuEvents() {
+        document.querySelectorAll('.add-btn').forEach(btn => btn.addEventListener('click', e => { let id = parseInt(e.currentTarget.dataset.id); cart[id] = (cart[id] || 0) + 1; refreshUI(); }));
+        document.querySelectorAll('.dec').forEach(btn => btn.addEventListener('click', e => { let id = parseInt(e.currentTarget.dataset.id); if(cart[id] > 1) cart[id]--; else delete cart[id]; refreshUI(); }));
+        document.querySelectorAll('.inc').forEach(btn => btn.addEventListener('click', e => { let id = parseInt(e.currentTarget.dataset.id); cart[id] = (cart[id] || 0) + 1; refreshUI(); }));
       }
 
-      function calculateTotal() {
-        return Object.entries(cart).reduce((sum, [id, qty]) => {
-          const item = menuItems.find(i => i.id === id);
-          return sum + (item ? item.price * qty : 0);
-        }, 0);
-      }
+      function refreshUI() { renderMenu(); updateBadge(); if(document.getElementById('cartPanel').classList.contains('open')) renderCart(); }
 
-      function updateBadge() {
-        const total = Object.values(cart).reduce((s, q) => s + q, 0);
-        cartBadge.textContent = total;
-      }
+      function updateBadge() { const total = Object.values(cart).reduce((a,b) => a + b, 0); document.getElementById('cartBadge').innerText = total; }
 
-      function renderCartPanel() {
+      function renderCart() {
         const entries = Object.entries(cart);
-        if (!entries.length) {
-          cartItemsContainer.innerHTML = '<p style="color:#9b8e7a; text-align:center; padding:2rem;">🛒 No items selected</p>';
-          cartTotalEl.innerHTML = '<span>💰</span> ₹0';
+        const container = document.getElementById('cartItemsContainer');
+        if(entries.length === 0) {
+          container.innerHTML = '<p style="color:#9b8e7a;text-align:center;padding:2rem;">🛒 No items selected</p>';
+          document.getElementById('cartTotal').innerHTML = '<span>💰</span> ₹0';
           return;
         }
-        cartItemsContainer.innerHTML = entries.map(([id, qty]) => {
-          const item = menuItems.find(i => i.id === id);
-          return `
-            <div class="cart-item-row">
-              <span class="cart-item-info">🍽️ ${item.name}</span>
-              <div class="cart-item-controls">
-                <button class="qty-btn cart-dec" data-id="${id}">−</button>
-                <span class="qty-val">${qty}</span>
-                <button class="qty-btn cart-inc" data-id="${id}">+</button>
-              </div>
-              <span style="font-weight:600; margin-left:0.3rem;">₹${item.price*qty}</span>
-            </div>
-          `;
+        container.innerHTML = entries.map(([id, qty]) => {
+          const item = menuItems.find(i => i.id == id);
+          return `<div class="cart-item-row"><span class="cart-item-info">🍽️ ${item.name}</span><div class="cart-item-controls"><button class="qty-btn cart-dec" data-id="${id}">−</button><span class="qty-val">${qty}</span><button class="qty-btn cart-inc" data-id="${id}">+</button></div><span style="font-weight:600;">₹${item.price * qty}</span></div>`;
         }).join('');
-        cartTotalEl.innerHTML = `<span>💰</span> ₹${calculateTotal().toLocaleString()}`;
-
-        document.querySelectorAll('.cart-dec').forEach(b => b.addEventListener('click', (e) => decreaseItem(e.currentTarget.dataset.id)));
-        document.querySelectorAll('.cart-inc').forEach(b => b.addEventListener('click', (e) => increaseItem(e.currentTarget.dataset.id)));
+        const total = Object.entries(cart).reduce((sum, [id, qty]) => { const it = menuItems.find(i => i.id == id); return sum + (it ? it.price * qty : 0); }, 0);
+        document.getElementById('cartTotal').innerHTML = `<span>💰</span> ₹${total.toLocaleString()}`;
+        document.querySelectorAll('.cart-dec').forEach(btn => btn.addEventListener('click', e => { let id = parseInt(e.currentTarget.dataset.id); if(cart[id] > 1) cart[id]--; else delete cart[id]; refreshUI(); if(document.getElementById('cartPanel').classList.contains('open')) renderCart(); }));
+        document.querySelectorAll('.cart-inc').forEach(btn => btn.addEventListener('click', e => { let id = parseInt(e.currentTarget.dataset.id); cart[id] = (cart[id] || 0) + 1; refreshUI(); if(document.getElementById('cartPanel').classList.contains('open')) renderCart(); }));
       }
 
-      function refreshUI() {
-        renderMenu();
-        updateBadge();
-        if (cartPanel.classList.contains('open')) renderCartPanel();
-      }
+      function openCart() { document.getElementById('cartPanel').classList.add('open'); renderCart(); }
+      function closeCart() { document.getElementById('cartPanel').classList.remove('open'); }
 
-      function openCart() { cartPanel.classList.add('open'); renderCartPanel(); }
-      function closeCart() { cartPanel.classList.remove('open'); }
-
-      function placeWhatsAppOrder() {
-        const tableNum = tableNumberInput.value.trim();
-        if (!tableNum || isNaN(tableNum) || parseInt(tableNum) < 1) {
-          alert('⚠️ Please enter a valid Table Number.');
-          return;
+      function placeOrder() {
+        const tableNum = document.getElementById('tableNumber').value.trim();
+        if(!tableNum || isNaN(tableNum) || parseInt(tableNum) < 1) { alert('⚠️ Please enter a valid Table Number.'); return; }
+        if(Object.keys(cart).length === 0) { alert('⚠️ Your cart is empty.'); return; }
+        let msg = "🍽️ *NOIR & GOLD - ORDER*\n\n🪑 *Table No:* " + tableNum + "\n\n📋 *Order Details:*\n";
+        for(let id in cart) {
+          const item = menuItems.find(i => i.id == id);
+          if(item) msg += `• ${item.name} × ${cart[id]} = ₹${item.price * cart[id]}\n`;
         }
-        if (!Object.keys(cart).length) {
-          alert('⚠️ Your cart is empty.');
-          return;
-        }
-
-        // Build message with proper newlines
-        let messageText = "🍽️ *NOIR & GOLD - ORDER*\n\n";
-        messageText += "🪑 *Table No:* " + tableNum + "\n\n";
-        messageText += "📋 *Order Details:*\n";
-        
-        Object.entries(cart).forEach(([id, qty]) => {
-          const item = menuItems.find(i => i.id === id);
-          const lineTotal = item.price * qty;
-          messageText += "• " + item.name + " × " + qty + " = ₹" + lineTotal + "\n";
-        });
-        
-        messageText += "\n━━━━━━━━━━━━━━━━\n";
-        messageText += "💰 *Total Amount: ₹" + calculateTotal() + "*\n\n";
-        messageText += "🙏 *Thank you for your order!*\n";
-        messageText += "👨‍🍳 *Our chef will prepare it fresh!*";
-
-        // Use encodeURIComponent properly
-        const whatsappURL = "https://wa.me/919284969878?text=" + encodeURIComponent(messageText);
-        
-        window.open(whatsappURL, '_blank');
+        const total = Object.entries(cart).reduce((s, [id, q]) => { const it = menuItems.find(i => i.id == id); return s + (it ? it.price * q : 0); }, 0);
+        msg += `\n━━━━━━━━━━━━━━━━\n💰 *Total Amount: ₹${total}*\n\n🙏 *Thank you for your order!*`;
+        window.open("https://wa.me/919284969878?text=" + encodeURIComponent(msg), '_blank');
       }
 
-      // Category click
-      categoryBar.addEventListener('click', (e) => {
+      document.getElementById('categoryBar').addEventListener('click', e => {
         const pill = e.target.closest('.cat-pill');
-        if (!pill) return;
-        const cat = pill.dataset.category;
+        if(!pill) return;
         document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
         pill.classList.add('active');
-        renderMenu(cat);
+        renderMenu(pill.dataset.category);
       });
+      document.getElementById('cartFloatBtn').addEventListener('click', openCart);
+      document.getElementById('closeCartBtn').addEventListener('click', closeCart);
+      document.getElementById('placeOrderBtn').addEventListener('click', placeOrder);
+      document.getElementById('whatsappFloat').addEventListener('click', () => window.open("https://wa.me/919284969878?text=" + encodeURIComponent("👋 Hello Noir & Gold! 🍽️"), '_blank'));
+      document.getElementById('cartPanel').addEventListener('click', e => { if(e.target === document.getElementById('cartPanel')) closeCart(); });
 
-      // Scroll spy
-      window.addEventListener('scroll', () => {
-        const sections = categories.map(c => document.getElementById(`cat-${c}`));
-        const pills = document.querySelectorAll('.cat-pill');
-        let current = categories[0];
-        sections.forEach((sec, idx) => {
-          if (sec && sec.getBoundingClientRect().top < 200) current = categories[idx];
-        });
-        pills.forEach(p => p.classList.toggle('active', p.dataset.category === current));
-      });
-
-      cartFloatBtn.addEventListener('click', openCart);
-      closeCartBtn.addEventListener('click', closeCart);
-      placeOrderBtn.addEventListener('click', placeWhatsAppOrder);
-      whatsappFloat.addEventListener('click', () => {
-        const waMsg = "👋 Hello Noir & Gold! 🍽️";
-        window.open("https://wa.me/919284969878?text=" + encodeURIComponent(waMsg), '_blank');
-      });
-      cartPanel.addEventListener('click', (e) => { if (e.target === cartPanel) closeCart(); });
-
-      // Init
-      renderCategoryBar();
+      renderCategories();
       renderMenu();
       updateBadge();
     })();
