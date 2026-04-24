@@ -23,6 +23,63 @@
       overflow-x: hidden;
       padding-bottom: 2rem;
       -webkit-font-smoothing: antialiased;
+      position: relative;
+    }
+
+    /* Background pattern with food icons */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 20% 20%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(212, 175, 55, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.02) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Floating food emojis background */
+    .bg-icons {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      overflow: hidden;
+    }
+    .bg-icon {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.04;
+      animation: floatIcon 20s infinite ease-in-out;
+      color: #d4af37;
+    }
+    .bg-icon:nth-child(1) { top: 10%; left: 5%; font-size: 3rem; animation-delay: 0s; }
+    .bg-icon:nth-child(2) { top: 25%; right: 8%; font-size: 2.5rem; animation-delay: 3s; }
+    .bg-icon:nth-child(3) { top: 50%; left: 10%; font-size: 3.5rem; animation-delay: 6s; }
+    .bg-icon:nth-child(4) { top: 70%; right: 5%; font-size: 2.8rem; animation-delay: 9s; }
+    .bg-icon:nth-child(5) { top: 85%; left: 15%; font-size: 2.2rem; animation-delay: 12s; }
+    .bg-icon:nth-child(6) { top: 15%; right: 20%; font-size: 3rem; animation-delay: 15s; }
+    .bg-icon:nth-child(7) { top: 40%; left: 80%; font-size: 2.5rem; animation-delay: 18s; }
+    .bg-icon:nth-child(8) { top: 60%; left: 3%; font-size: 3rem; animation-delay: 2s; }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      25% { transform: translateY(-20px) rotate(5deg); }
+      50% { transform: translateY(-10px) rotate(-3deg); }
+      75% { transform: translateY(-25px) rotate(2deg); }
+    }
+
+    /* Main content wrapper */
+    .main-content {
+      position: relative;
+      z-index: 1;
     }
 
     /* ----- Sticky Header (dark glass) ----- */
@@ -42,9 +99,18 @@
       position: relative;
     }
     .logo-img {
-      max-height: 45px;
+      max-height: 50px;
       width: auto;
       display: block;
+      filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+    }
+    .header-icons {
+      position: absolute;
+      left: 1.2rem;
+      display: flex;
+      gap: 0.5rem;
+      font-size: 1.2rem;
+      color: #d4af37;
     }
     .call-btn-header {
       position: absolute;
@@ -59,10 +125,33 @@
       transition: 0.25s;
       font-size: 0.85rem;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }
     .call-btn-header:hover {
       background: #d4af37;
       color: #0d0b0a;
+    }
+
+    /* Chef icon section below header */
+    .chef-strip {
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.8rem;
+      color: #bcb09b;
+      background: rgba(212, 175, 55, 0.05);
+      border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+    }
+    .chef-strip span {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
     }
 
     /* ----- Sticky Category Bar ----- */
@@ -92,6 +181,9 @@
       cursor: pointer;
       transition: all 0.3s;
       white-space: nowrap;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
     }
     .cat-pill.active {
       background: #d4af37;
@@ -110,6 +202,17 @@
     .category-section {
       margin-bottom: 2rem;
       animation: fadeIn 0.4s ease;
+      position: relative;
+    }
+    .category-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -20px;
+      width: 5px;
+      height: 100%;
+      background: linear-gradient(to bottom, transparent, rgba(212, 175, 55, 0.3), transparent);
+      border-radius: 5px;
     }
     .category-title {
       font-family: 'Poppins', sans-serif;
@@ -118,6 +221,9 @@
       color: #d4af37;
       margin: 1.2rem 0 0.5rem;
       letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
 
     /* Compact single-line menu row */
@@ -125,14 +231,29 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0.7rem 0.2rem;
+      padding: 0.7rem 0.5rem;
       border-bottom: 1px solid #2a241c;
-      transition: background 0.2s;
+      transition: all 0.2s;
       gap: 0.4rem;
       border-radius: 6px;
+      position: relative;
+    }
+    .menu-row::before {
+      content: '🍽️';
+      position: absolute;
+      left: -25px;
+      font-size: 0.6rem;
+      opacity: 0;
+      transition: 0.3s;
+      color: #d4af37;
     }
     .menu-row:hover {
-      background: rgba(212, 175, 55, 0.06);
+      background: rgba(212, 175, 55, 0.08);
+      padding-left: 1rem;
+    }
+    .menu-row:hover::before {
+      opacity: 0.5;
+      left: -5px;
     }
     .item-name {
       flex: 2;
@@ -142,6 +263,13 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .veg-icon {
+      font-size: 0.7rem;
+      color: #4CAF50;
     }
     .item-price {
       font-weight: 700;
@@ -200,6 +328,17 @@
     }
     .add-single:hover {
       background: #e5c34b;
+      transform: scale(1.1);
+    }
+
+    /* Special badges */
+    .badge {
+      font-size: 0.6rem;
+      background: rgba(212, 175, 55, 0.2);
+      color: #d4af37;
+      padding: 0.15rem 0.5rem;
+      border-radius: 1rem;
+      margin-left: 0.3rem;
     }
 
     /* Floating Cart & WA */
@@ -213,7 +352,7 @@
       z-index: 50;
     }
     .float-btn {
-      background: rgba(20, 16, 12, 0.8);
+      background: rgba(20, 16, 12, 0.9);
       backdrop-filter: blur(12px);
       border: 1px solid #d4af37;
       color: #d4af37;
@@ -228,6 +367,11 @@
       box-shadow: 0 8px 24px rgba(0,0,0,0.7);
       transition: 0.25s;
       position: relative;
+    }
+    .float-btn:hover {
+      background: #d4af37;
+      color: #0d0b0a;
+      transform: translateY(-3px);
     }
     .cart-badge {
       position: absolute;
@@ -327,6 +471,9 @@
       font-size: 1.3rem;
       color: #d4af37;
       margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
     }
     .wa-order-btn {
       background: #d4af37;
@@ -348,8 +495,15 @@
     .location-section {
       padding: 2rem 1rem;
       text-align: center;
-      border-top: 1px solid #d4af3722;
+      border-top: 1px solid rgba(212, 175, 55, 0.15);
       margin-top: 1rem;
+      position: relative;
+    }
+    .location-section::before {
+      content: '📍';
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 0.5rem;
     }
     .location-btn {
       display: inline-flex;
@@ -362,39 +516,112 @@
       font-weight: 600;
       text-decoration: none;
       margin-top: 0.8rem;
+      transition: 0.3s;
+    }
+    .location-btn:hover {
+      background: #e5c34b;
+      box-shadow: 0 8px 24px rgba(212,175,55,0.3);
+    }
+
+    /* Footer with icons */
+    .footer-strip {
+      text-align: center;
+      padding: 1rem;
+      color: #bcb09b;
+      font-size: 0.8rem;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
     }
 
     @keyframes fadeIn {
       0% { opacity: 0.6; transform: translateY(5px); }
       100% { opacity: 1; transform: translateY(0); }
     }
+
+    @media (max-width: 480px) {
+      .header-icons {
+        font-size: 1rem;
+        left: 0.8rem;
+      }
+      .call-btn-header {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+        right: 0.8rem;
+      }
+      .menu-row::before {
+        display: none;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- Dark Sticky Header with centered logo PNG -->
-  <header class="dark-header">
-    <!-- REPLACE src WITH YOUR PNG LOGO FILE -->
-    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='40'%3E%3Ctext x='0' y='30' font-family='Poppins' font-size='22' fill='%23d4af37' font-weight='bold'%3ENOIR %26 GOLD%3C/text%3E%3C/svg%3E" alt="Restaurant Logo" class="logo-img" id="logoImage">
-    <a href="tel:+919284969878" class="call-btn-header">📞 Call</a>
-  </header>
+  <!-- Background floating icons -->
+  <div class="bg-icons">
+    <span class="bg-icon">🍽️</span>
+    <span class="bg-icon">👨‍🍳</span>
+    <span class="bg-icon">🥂</span>
+    <span class="bg-icon">🍷</span>
+    <span class="bg-icon">🥩</span>
+    <span class="bg-icon">🍝</span>
+    <span class="bg-icon">🧁</span>
+    <span class="bg-icon">🍣</span>
+  </div>
 
-  <!-- Sticky Category Bar -->
-  <div class="category-bar" id="categoryBar"></div>
+  <!-- Main Content -->
+  <div class="main-content">
+    <!-- Dark Sticky Header with centered logo PNG -->
+    <header class="dark-header">
+      <div class="header-icons">
+        <span>👨‍🍳</span>
+        <span>⭐</span>
+      </div>
+      <!-- REPLACE src WITH YOUR PNG LOGO FILE -->
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='50'%3E%3Ctext x='10' y='35' font-family='Poppins' font-size='20' fill='%23d4af37' font-weight='bold'%3E🍽️ NOIR %26 GOLD%3C/text%3E%3C/svg%3E" alt="Restaurant Logo" class="logo-img" id="logoImage">
+      <a href="tel:+919284969878" class="call-btn-header">
+        <span>📞</span> Call
+      </a>
+    </header>
 
-  <!-- Menu Items Container -->
-  <div class="menu-container" id="menuContainer"></div>
+    <!-- Chef strip -->
+    <div class="chef-strip">
+      <span>👨‍🍳 Chef's Special</span>
+      <span>⭐ Fine Dining</span>
+      <span>🍷 Premium Bar</span>
+      <span>🥂 Live Kitchen</span>
+    </div>
 
-  <!-- Google Map Location -->
-  <div class="location-section">
-    <p style="color:#bcb09b;">📍 Find us on Google Maps</p>
-    <a href="https://maps.app.goo.gl/YOURGOOGLEMAPSLINK" target="_blank" class="location-btn">Open Location in Maps</a>
+    <!-- Sticky Category Bar -->
+    <div class="category-bar" id="categoryBar"></div>
+
+    <!-- Menu Items Container -->
+    <div class="menu-container" id="menuContainer"></div>
+
+    <!-- Google Map Location -->
+    <div class="location-section">
+      <p style="color:#bcb09b;">Find us on Google Maps</p>
+      <a href="https://maps.app.goo.gl/YOURGOOGLEMAPSLINK" target="_blank" class="location-btn">
+        <span>📍</span> Open Location in Maps
+      </a>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer-strip">
+      <span>🍽️ Fine Dining</span>
+      <span>👨‍🍳 Expert Chefs</span>
+      <span>🥂 Premium Experience</span>
+      <span>⭐ 5 Star Rating</span>
+    </div>
   </div>
 
   <!-- Floating Buttons -->
   <div class="float-buttons">
-    <button class="float-btn" id="whatsappFloat" title="Chat on WhatsApp">💬</button>
+    <button class="float-btn" id="whatsappFloat" title="Chat on WhatsApp">
+      <span>💬</span>
+    </button>
     <button class="float-btn" id="cartFloatBtn">
-      🛒
+      <span>🛒</span>
       <span class="cart-badge" id="cartBadge">0</span>
     </button>
   </div>
@@ -402,14 +629,16 @@
   <!-- Slide-in Cart Panel -->
   <div class="cart-panel" id="cartPanel">
     <div class="cart-header">
-      <h3 style="color:#d4af37;">Your Order</h3>
+      <h3 style="color:#d4af37;">🛒 Your Order</h3>
       <button class="close-cart" id="closeCartBtn">&times;</button>
     </div>
     <div class="cart-items" id="cartItemsContainer"></div>
     <div class="table-input-area">
-      <input type="number" id="tableNumber" placeholder="Table Number (required)" min="1">
+      <input type="number" id="tableNumber" placeholder="🪑 Table Number (required)" min="1">
     </div>
-    <div class="total-bill" id="cartTotal">₹0</div>
+    <div class="total-bill" id="cartTotal">
+      <span>💰</span> ₹0
+    </div>
     <button class="wa-order-btn" id="placeOrderBtn">
       📲 Order on WhatsApp
     </button>
@@ -770,6 +999,7 @@ const categoryTitles = categories.reduce((acc, cat) => {
 }, {});
 
 let cart = {};
+
       // DOM elements
       const categoryBar = document.getElementById('categoryBar');
       const menuContainer = document.getElementById('menuContainer');
@@ -785,7 +1015,9 @@ let cart = {};
 
       function renderCategoryBar() {
         categoryBar.innerHTML = categories.map(cat => 
-          `<button class="cat-pill" data-category="${cat}">${categoryTitles[cat]}</button>`
+          `<button class="cat-pill" data-category="${cat}">
+            <span>${categoryIcons[cat]}</span> ${categoryTitles[cat]}
+          </button>`
         ).join('');
         const first = categoryBar.querySelector('.cat-pill');
         if (first) first.classList.add('active');
@@ -796,12 +1028,17 @@ let cart = {};
         categories.forEach(cat => {
           const items = menuItems.filter(i => i.category === cat);
           html += `<div class="category-section" id="cat-${cat}">`;
-          html += `<div class="category-title">${categoryTitles[cat]}</div>`;
+          html += `<div class="category-title">
+            <span>${categoryIcons[cat]}</span> ${categoryTitles[cat]}
+          </div>`;
           items.forEach(item => {
             const qty = cart[item.id] || 0;
             html += `
               <div class="menu-row">
-                <span class="item-name" title="${item.name}">${item.name}</span>
+                <span class="item-name" title="${item.name}">
+                  <span class="veg-icon">🍽️</span> ${item.name}
+                  ${item.badge ? `<span class="badge">${item.badge}</span>` : ''}
+                </span>
                 <span class="item-price">₹${item.price}</span>
                 <div class="cart-cell">
                   ${qty > 0 ? `
@@ -852,15 +1089,15 @@ let cart = {};
       function renderCartPanel() {
         const entries = Object.entries(cart);
         if (!entries.length) {
-          cartItemsContainer.innerHTML = '<p style="color:#9b8e7a;">No items selected.</p>';
-          cartTotalEl.textContent = '₹0';
+          cartItemsContainer.innerHTML = '<p style="color:#9b8e7a; text-align:center; padding:2rem;">🛒 No items selected</p>';
+          cartTotalEl.innerHTML = '<span>💰</span> ₹0';
           return;
         }
         cartItemsContainer.innerHTML = entries.map(([id, qty]) => {
           const item = menuItems.find(i => i.id === id);
           return `
             <div class="cart-item-row">
-              <span class="cart-item-info">${item.name}</span>
+              <span class="cart-item-info">🍽️ ${item.name}</span>
               <div class="cart-item-controls">
                 <button class="qty-btn cart-dec" data-id="${id}">−</button>
                 <span class="qty-val">${qty}</span>
@@ -870,7 +1107,7 @@ let cart = {};
             </div>
           `;
         }).join('');
-        cartTotalEl.textContent = `₹${calculateTotal().toLocaleString()}`;
+        cartTotalEl.innerHTML = `<span>💰</span> ₹${calculateTotal().toLocaleString()}`;
 
         document.querySelectorAll('.cart-dec').forEach(b => b.addEventListener('click', (e) => decreaseItem(e.currentTarget.dataset.id)));
         document.querySelectorAll('.cart-inc').forEach(b => b.addEventListener('click', (e) => increaseItem(e.currentTarget.dataset.id)));
@@ -888,17 +1125,17 @@ let cart = {};
       function placeWhatsAppOrder() {
         const tableNum = tableNumberInput.value.trim();
         if (!tableNum || isNaN(tableNum) || parseInt(tableNum) < 1) {
-          alert('Please enter a valid Table Number.');
+          alert('⚠️ Please enter a valid Table Number.');
           return;
         }
         if (!Object.keys(cart).length) {
-          alert('Your cart is empty.');
+          alert('⚠️ Your cart is empty.');
           return;
         }
 
         // Build message with proper newlines
         let messageText = "🍽️ *NOIR & GOLD - ORDER*\n\n";
-        messageText += "📍 *Table No:* " + tableNum + "\n\n";
+        messageText += "🪑 *Table No:* " + tableNum + "\n\n";
         messageText += "📋 *Order Details:*\n";
         
         Object.entries(cart).forEach(([id, qty]) => {
@@ -909,7 +1146,8 @@ let cart = {};
         
         messageText += "\n━━━━━━━━━━━━━━━━\n";
         messageText += "💰 *Total Amount: ₹" + calculateTotal() + "*\n\n";
-        messageText += "🙏 *Thank you for your order!*";
+        messageText += "🙏 *Thank you for your order!*\n";
+        messageText += "👨‍🍳 *Our chef will prepare it fresh!*";
 
         // Use encodeURIComponent properly
         const whatsappURL = "https://wa.me/919284969878?text=" + encodeURIComponent(messageText);
@@ -942,7 +1180,7 @@ let cart = {};
       closeCartBtn.addEventListener('click', closeCart);
       placeOrderBtn.addEventListener('click', placeWhatsAppOrder);
       whatsappFloat.addEventListener('click', () => {
-        const waMsg = "Hello Noir & Gold! 👋";
+        const waMsg = "👋 Hello Noir & Gold! 🍽️";
         window.open("https://wa.me/919284969878?text=" + encodeURIComponent(waMsg), '_blank');
       });
       cartPanel.addEventListener('click', (e) => { if (e.target === cartPanel) closeCart(); });
