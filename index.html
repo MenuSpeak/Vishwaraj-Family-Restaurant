@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+  <title>Noir & Gold • Fine Dining</title>
+  <!-- Premium Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', 'Poppins', system-ui, -apple-system, sans-serif;
+      background: #0d0b0a;
+      color: #e7dfcc;
+      line-height: 1.4;
+      overflow-x: hidden;
+      padding-bottom: 2rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ----- Sticky Header (dark glass) ----- */
+    .dark-header {
+      position: sticky;
+      top: 0;
+      background: rgba(13, 11, 10, 0.9);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      z-index: 40;
+      padding: 0.8rem 1.2rem;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+    .logo-img {
+      max-height: 45px;
+      width: auto;
+      display: block;
+    }
+    .call-btn-header {
+      position: absolute;
+      right: 1.2rem;
+      background: rgba(212,175,55,0.1);
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.25s;
+      font-size: 0.85rem;
+      text-decoration: none;
+    }
+    .call-btn-header:hover {
+      background: #d4af37;
+      color: #0d0b0a;
+    }
+
+    /* ----- Sticky Category Bar ----- */
+    .category-bar {
+      position: sticky;
+      top: 62px;
+      background: rgba(13, 11, 10, 0.85);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 35;
+      padding: 0.6rem 0.8rem;
+      display: flex;
+      gap: 0.5rem;
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: thin;
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+    .cat-pill {
+      background: transparent;
+      border: 1px solid #3a3327;
+      color: #bcb09b;
+      padding: 0.5rem 1.3rem;
+      border-radius: 2.5rem;
+      font-weight: 500;
+      font-size: 0.8rem;
+      cursor: pointer;
+      transition: all 0.3s;
+      white-space: nowrap;
+    }
+    .cat-pill.active {
+      background: #d4af37;
+      border-color: #d4af37;
+      color: #0d0b0a;
+      font-weight: 600;
+      box-shadow: 0 6px 18px rgba(212,175,55,0.4);
+    }
+
+    /* Menu container */
+    .menu-container {
+      padding: 0.3rem 0.8rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    .category-section {
+      margin-bottom: 2rem;
+      animation: fadeIn 0.4s ease;
+    }
+    .category-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #d4af37;
+      margin: 1.2rem 0 0.5rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Compact single-line menu row */
+    .menu-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.7rem 0.2rem;
+      border-bottom: 1px solid #2a241c;
+      transition: background 0.2s;
+      gap: 0.4rem;
+      border-radius: 6px;
+    }
+    .menu-row:hover {
+      background: rgba(212, 175, 55, 0.06);
+    }
+    .item-name {
+      flex: 2;
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #e4d7c2;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .item-price {
+      font-weight: 700;
+      color: #d4af37;
+      font-size: 0.9rem;
+      min-width: 55px;
+      text-align: right;
+    }
+    .cart-cell {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      min-width: 75px;
+      justify-content: flex-end;
+    }
+    .qty-btn {
+      background: #2a241c;
+      border: 1px solid #4a3e2c;
+      color: #d4af37;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.2s;
+      font-size: 1rem;
+    }
+    .qty-btn:hover {
+      background: #d4af37;
+      color: #0d0b0a;
+      border-color: #d4af37;
+    }
+    .qty-val {
+      min-width: 20px;
+      text-align: center;
+      font-weight: 600;
+    }
+    .add-single {
+      background: #d4af37;
+      border: none;
+      color: #0d0b0a;
+      font-weight: 700;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(212,175,55,0.3);
+      transition: 0.2s;
+    }
+    .add-single:hover {
+      background: #e5c34b;
+    }
+
+    /* Floating Cart & WA */
+    .float-buttons {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      z-index: 50;
+    }
+    .float-btn {
+      background: rgba(20, 16, 12, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid #d4af37;
+      color: #d4af37;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+      transition: 0.25s;
+      position: relative;
+    }
+    .cart-badge {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      background: #d4af37;
+      color: #0d0b0a;
+      border-radius: 50%;
+      width: 22px;
+      height: 22px;
+      font-weight: 700;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Slide-in Cart Panel */
+    .cart-panel {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      max-width: 400px;
+      height: 100vh;
+      background: rgba(18, 14, 10, 0.97);
+      backdrop-filter: blur(24px);
+      box-shadow: -10px 0 40px rgba(0,0,0,0.9);
+      z-index: 200;
+      transition: right 0.35s cubic-bezier(0.2, 0.9, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+      padding: 1.5rem 1.2rem;
+      border-left: 1px solid #d4af37;
+      color: #e7dfcc;
+    }
+    .cart-panel.open {
+      right: 0;
+    }
+    .cart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.2rem;
+    }
+    .close-cart {
+      background: none;
+      border: none;
+      color: #d4af37;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+    .cart-items {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .cart-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #3a3327;
+      gap: 0.4rem;
+    }
+    .cart-item-info {
+      flex: 2;
+      font-size: 0.85rem;
+    }
+    .cart-item-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .cart-item-controls .qty-btn {
+      width: 28px;
+      height: 28px;
+      font-size: 1rem;
+    }
+    .table-input-area {
+      margin: 1rem 0 0.8rem;
+    }
+    .table-input-area input {
+      width: 100%;
+      background: #1f1a14;
+      border: 1px solid #4a3e2c;
+      padding: 0.9rem 1rem;
+      border-radius: 2rem;
+      color: #f0e2c5;
+      outline: none;
+      font-size: 0.95rem;
+    }
+    .table-input-area input:focus {
+      border-color: #d4af37;
+    }
+    .total-bill {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #d4af37;
+      margin: 0.5rem 0;
+    }
+    .wa-order-btn {
+      background: #d4af37;
+      border: none;
+      color: #0d0b0a;
+      font-weight: 700;
+      padding: 0.9rem;
+      border-radius: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Google Map Section */
+    .location-section {
+      padding: 2rem 1rem;
+      text-align: center;
+      border-top: 1px solid #d4af3722;
+      margin-top: 1rem;
+    }
+    .location-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: #d4af37;
+      color: #0d0b0a;
+      padding: 0.9rem 2rem;
+      border-radius: 3rem;
+      font-weight: 600;
+      text-decoration: none;
+      margin-top: 0.8rem;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0.6; transform: translateY(5px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Dark Sticky Header with centered logo PNG -->
+  <header class="dark-header">
+    <!-- REPLACE src WITH YOUR PNG LOGO FILE -->
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='40'%3E%3Ctext x='0' y='30' font-family='Poppins' font-size='22' fill='%23d4af37' font-weight='bold'%3ENOIR %26 GOLD%3C/text%3E%3C/svg%3E" alt="Restaurant Logo" class="logo-img" id="logoImage">
+    <a href="tel:+919284969878" class="call-btn-header">📞 Call</a>
+  </header>
+
+  <!-- Sticky Category Bar -->
+  <div class="category-bar" id="categoryBar"></div>
+
+  <!-- Menu Items Container -->
+  <div class="menu-container" id="menuContainer"></div>
+
+  <!-- Google Map Location -->
+  <div class="location-section">
+    <p style="color:#bcb09b;">📍 Find us on Google Maps</p>
+    <a href="https://maps.app.goo.gl/YOURGOOGLEMAPSLINK" target="_blank" class="location-btn">Open Location in Maps</a>
+  </div>
+
+  <!-- Floating Buttons -->
+  <div class="float-buttons">
+    <button class="float-btn" id="whatsappFloat" title="Chat on WhatsApp">💬</button>
+    <button class="float-btn" id="cartFloatBtn">
+      🛒
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+  </div>
+
+  <!-- Slide-in Cart Panel -->
+  <div class="cart-panel" id="cartPanel">
+    <div class="cart-header">
+      <h3 style="color:#d4af37;">Your Order</h3>
+      <button class="close-cart" id="closeCartBtn">&times;</button>
+    </div>
+    <div class="cart-items" id="cartItemsContainer"></div>
+    <div class="table-input-area">
+      <input type="number" id="tableNumber" placeholder="Table Number (required)" min="1">
+    </div>
+    <div class="total-bill" id="cartTotal">₹0</div>
+    <button class="wa-order-btn" id="placeOrderBtn">
+      📲 Order on WhatsApp
+    </button>
+  </div>
+
+  <script>
+    (() => {
+      // ---------- ADD YOUR MENU ITEMS HERE ----------
+      const menuItems = [
+        { id: 's1', name: 'Truffle Mushroom Soup', price: 280, category: 'starters' },
+        { id: 's2', name: 'Lobster Bisque', price: 390, category: 'starters' },
+        { id: 's3', name: 'Crispy Calamari', price: 320, category: 'starters' },
+        { id: 'm1', name: 'Wagyu Tenderloin', price: 1450, category: 'main' },
+        { id: 'm2', name: 'Black Cod Miso', price: 980, category: 'main' },
+        { id: 'm3', name: 'Truffle Risotto', price: 720, category: 'main' },
+        { id: 'd1', name: 'Gold Leaf Martini', price: 650, category: 'drinks' },
+        { id: 'd2', name: 'Vintage Champagne', price: 1200, category: 'drinks' },
+        // Add more items as needed
+      ];
+
+      const categories = ['starters', 'main', 'drinks'];
+      const categoryTitles = { starters: '🍴 Starters', main: '🍛 Main Course', drinks: '🥂 Drinks' };
+      let cart = {};
+
+      // DOM elements
+      const categoryBar = document.getElementById('categoryBar');
+      const menuContainer = document.getElementById('menuContainer');
+      const cartBadge = document.getElementById('cartBadge');
+      const cartPanel = document.getElementById('cartPanel');
+      const closeCartBtn = document.getElementById('closeCartBtn');
+      const cartFloatBtn = document.getElementById('cartFloatBtn');
+      const cartItemsContainer = document.getElementById('cartItemsContainer');
+      const cartTotalEl = document.getElementById('cartTotal');
+      const tableNumberInput = document.getElementById('tableNumber');
+      const placeOrderBtn = document.getElementById('placeOrderBtn');
+      const whatsappFloat = document.getElementById('whatsappFloat');
+
+      function renderCategoryBar() {
+        categoryBar.innerHTML = categories.map(cat => 
+          `<button class="cat-pill" data-category="${cat}">${categoryTitles[cat]}</button>`
+        ).join('');
+        const first = categoryBar.querySelector('.cat-pill');
+        if (first) first.classList.add('active');
+      }
+
+      function renderMenu(scrollToCat = null) {
+        let html = '';
+        categories.forEach(cat => {
+          const items = menuItems.filter(i => i.category === cat);
+          html += `<div class="category-section" id="cat-${cat}">`;
+          html += `<div class="category-title">${categoryTitles[cat]}</div>`;
+          items.forEach(item => {
+            const qty = cart[item.id] || 0;
+            html += `
+              <div class="menu-row">
+                <span class="item-name" title="${item.name}">${item.name}</span>
+                <span class="item-price">₹${item.price}</span>
+                <div class="cart-cell">
+                  ${qty > 0 ? `
+                    <button class="qty-btn dec" data-id="${item.id}">−</button>
+                    <span class="qty-val">${qty}</span>
+                    <button class="qty-btn inc" data-id="${item.id}">+</button>
+                  ` : `
+                    <button class="add-single add-btn" data-id="${item.id}">+</button>
+                  `}
+                </div>
+              </div>
+            `;
+          });
+          html += `</div>`;
+        });
+        menuContainer.innerHTML = html;
+
+        document.querySelectorAll('.add-btn').forEach(b => b.addEventListener('click', (e) => addItem(e.currentTarget.dataset.id)));
+        document.querySelectorAll('.dec').forEach(b => b.addEventListener('click', (e) => decreaseItem(e.currentTarget.dataset.id)));
+        document.querySelectorAll('.inc').forEach(b => b.addEventListener('click', (e) => increaseItem(e.currentTarget.dataset.id)));
+
+        if (scrollToCat) {
+          const el = document.getElementById(`cat-${scrollToCat}`);
+          if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+
+      function addItem(id) { cart[id] = (cart[id] || 0) + 1; refreshUI(); }
+      function increaseItem(id) { cart[id] = (cart[id] || 0) + 1; refreshUI(); }
+      function decreaseItem(id) {
+        if (cart[id] && cart[id] > 1) cart[id]--;
+        else delete cart[id];
+        refreshUI();
+      }
+
+      function calculateTotal() {
+        return Object.entries(cart).reduce((sum, [id, qty]) => {
+          const item = menuItems.find(i => i.id === id);
+          return sum + (item ? item.price * qty : 0);
+        }, 0);
+      }
+
+      function updateBadge() {
+        const total = Object.values(cart).reduce((s, q) => s + q, 0);
+        cartBadge.textContent = total;
+      }
+
+      function renderCartPanel() {
+        const entries = Object.entries(cart);
+        if (!entries.length) {
+          cartItemsContainer.innerHTML = '<p style="color:#9b8e7a;">No items selected.</p>';
+          cartTotalEl.textContent = '₹0';
+          return;
+        }
+        cartItemsContainer.innerHTML = entries.map(([id, qty]) => {
+          const item = menuItems.find(i => i.id === id);
+          return `
+            <div class="cart-item-row">
+              <span class="cart-item-info">${item.name}</span>
+              <div class="cart-item-controls">
+                <button class="qty-btn cart-dec" data-id="${id}">−</button>
+                <span class="qty-val">${qty}</span>
+                <button class="qty-btn cart-inc" data-id="${id}">+</button>
+              </div>
+              <span style="font-weight:600; margin-left:0.3rem;">₹${item.price*qty}</span>
+            </div>
+          `;
+        }).join('');
+        cartTotalEl.textContent = `₹${calculateTotal().toLocaleString()}`;
+
+        document.querySelectorAll('.cart-dec').forEach(b => b.addEventListener('click', (e) => decreaseItem(e.currentTarget.dataset.id)));
+        document.querySelectorAll('.cart-inc').forEach(b => b.addEventListener('click', (e) => increaseItem(e.currentTarget.dataset.id)));
+      }
+
+      function refreshUI() {
+        renderMenu();
+        updateBadge();
+        if (cartPanel.classList.contains('open')) renderCartPanel();
+      }
+
+      function openCart() { cartPanel.classList.add('open'); renderCartPanel(); }
+      function closeCart() { cartPanel.classList.remove('open'); }
+
+      function placeWhatsAppOrder() {
+        const tableNum = tableNumberInput.value.trim();
+        if (!tableNum || isNaN(tableNum) || parseInt(tableNum) < 1) {
+          alert('Please enter a valid Table Number.');
+          return;
+        }
+        if (!Object.keys(cart).length) {
+          alert('Your cart is empty.');
+          return;
+        }
+
+        // Build message with proper newlines
+        let messageText = "🍽️ *NOIR & GOLD - ORDER*\n\n";
+        messageText += "📍 *Table No:* " + tableNum + "\n\n";
+        messageText += "📋 *Order Details:*\n";
+        
+        Object.entries(cart).forEach(([id, qty]) => {
+          const item = menuItems.find(i => i.id === id);
+          const lineTotal = item.price * qty;
+          messageText += "• " + item.name + " × " + qty + " = ₹" + lineTotal + "\n";
+        });
+        
+        messageText += "\n━━━━━━━━━━━━━━━━\n";
+        messageText += "💰 *Total Amount: ₹" + calculateTotal() + "*\n\n";
+        messageText += "🙏 *Thank you for your order!*";
+
+        // Use encodeURIComponent properly
+        const whatsappURL = "https://wa.me/919284969878?text=" + encodeURIComponent(messageText);
+        
+        window.open(whatsappURL, '_blank');
+      }
+
+      // Category click
+      categoryBar.addEventListener('click', (e) => {
+        const pill = e.target.closest('.cat-pill');
+        if (!pill) return;
+        const cat = pill.dataset.category;
+        document.querySelectorAll('.cat-pill').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+        renderMenu(cat);
+      });
+
+      // Scroll spy
+      window.addEventListener('scroll', () => {
+        const sections = categories.map(c => document.getElementById(`cat-${c}`));
+        const pills = document.querySelectorAll('.cat-pill');
+        let current = categories[0];
+        sections.forEach((sec, idx) => {
+          if (sec && sec.getBoundingClientRect().top < 200) current = categories[idx];
+        });
+        pills.forEach(p => p.classList.toggle('active', p.dataset.category === current));
+      });
+
+      cartFloatBtn.addEventListener('click', openCart);
+      closeCartBtn.addEventListener('click', closeCart);
+      placeOrderBtn.addEventListener('click', placeWhatsAppOrder);
+      whatsappFloat.addEventListener('click', () => {
+        const waMsg = "Hello Noir & Gold! 👋";
+        window.open("https://wa.me/919284969878?text=" + encodeURIComponent(waMsg), '_blank');
+      });
+      cartPanel.addEventListener('click', (e) => { if (e.target === cartPanel) closeCart(); });
+
+      // Init
+      renderCategoryBar();
+      renderMenu();
+      updateBadge();
+    })();
+  </script>
+</body>
+</html>
