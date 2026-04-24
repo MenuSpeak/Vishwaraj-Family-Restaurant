@@ -418,351 +418,358 @@
   <script>
     (() => {
       // ---------- ADD YOUR MENU ITEMS HERE ----------
-     const menuItems = [
+const menuItems = [
     // Veg Soup
-    { id: 'vs1', name: 'Tomato Soup', price: 90, category: 'Veg Soup' }, // [cite: 10]
-    { id: 'vs2', name: 'Tomato Soup 1/2', price: 120, category: 'Veg Soup' }, // [cite: 10]
-    { id: 'vs3', name: 'Veg hot & Sour Soup', price: 90, category: 'Veg Soup' }, // [cite: 10]
-    { id: 'vs4', name: 'Veg hot & Sour Soup 1/2', price: 120, category: 'Veg Soup' }, // [cite: 10]
-    { id: 'vs5', name: 'Veg Corn Soup', price: 90, category: 'Veg Soup' }, // [cite: 10]
-    { id: 'vs6', name: 'Veg Corn Soup 1/2', price: 120, category: 'Veg Soup' }, // [cite: 10]
-    { id: 'vs7', name: 'Veg Manchurian Soup', price: 90, category: 'Veg Soup' }, // [cite: 10]
-    { id: 'vs8', name: 'Veg Manchurian Soup 1/2', price: 120, category: 'Veg Soup' }, // [cite: 10]
-    { id: 'vs9', name: 'Hot Garlic Soup', price: 140, category: 'Veg Soup' }, // [cite: 10]
+    { id: 1, name: 'Tomato Soup', price: 90, category: 'Veg Soup' },
+    { id: 2, name: 'Tomato Soup 1/2', price: 120, category: 'Veg Soup' },
+    { id: 3, name: 'Veg hot & Sour Soup', price: 90, category: 'Veg Soup' },
+    { id: 4, name: 'Veg hot & Sour Soup 1/2', price: 120, category: 'Veg Soup' },
+    { id: 5, name: 'Veg Corn Soup', price: 90, category: 'Veg Soup' },
+    { id: 6, name: 'Veg Corn Soup 1/2', price: 120, category: 'Veg Soup' },
+    { id: 7, name: 'Veg Manchurian Soup', price: 90, category: 'Veg Soup' },
+    { id: 8, name: 'Veg Manchurian Soup 1/2', price: 120, category: 'Veg Soup' },
+    { id: 9, name: 'Hot Garlic Soup', price: 140, category: 'Veg Soup' },
 
     // Non-Veg Soup
-    { id: 'nvs1', name: 'Chicken Corn Soup', price: 120, category: 'Non-Veg Soup' }, // [cite: 12]
-    { id: 'nvs2', name: 'Chicken Corn Soup 1/2', price: 150, category: 'Non-Veg Soup' }, // [cite: 12]
-    { id: 'nvs3', name: 'Chicken Hot & Sour Soup', price: 120, category: 'Non-Veg Soup' }, // [cite: 12]
-    { id: 'nvs4', name: 'Chicken Hot & Sour Soup 1/2', price: 150, category: 'Non-Veg Soup' }, // [cite: 12]
-    { id: 'nvs5', name: 'Chicken Manchow Soup', price: 120, category: 'Non-Veg Soup' }, // [cite: 12]
-    { id: 'nvs6', name: 'Chicken Manchow Soup 1/2', price: 150, category: 'Non-Veg Soup' }, // [cite: 12]
-    { id: 'nvs7', name: 'Chicken Egg Drop Soup', price: 160, category: 'Non-Veg Soup' }, // [cite: 12]
+    { id: 10, name: 'Chicken Corn Soup', price: 120, category: 'Non-Veg Soup' },
+    { id: 11, name: 'Chicken Corn Soup 1/2', price: 150, category: 'Non-Veg Soup' },
+    { id: 12, name: 'Chicken Hot & Sour Soup', price: 120, category: 'Non-Veg Soup' },
+    { id: 13, name: 'Chicken Hot & Sour Soup 1/2', price: 150, category: 'Non-Veg Soup' },
+    { id: 14, name: 'Chicken Manchow Soup', price: 120, category: 'Non-Veg Soup' },
+    { id: 15, name: 'Chicken Manchow Soup 1/2', price: 150, category: 'Non-Veg Soup' },
+    { id: 16, name: 'Chicken Egg Drop Soup', price: 160, category: 'Non-Veg Soup' },
 
     // Veg Starter
-    { id: 'vst1', name: 'Veg Manchurian Dry', price: 150, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst2', name: 'Veg Manchurian Wet', price: 160, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst3', name: 'Gobi Manchurian Dry', price: 150, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst4', name: 'Gobi Manchurian Wet', price: 160, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst5', name: 'Baby Corn Manchurian', price: 190, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst6', name: 'Baby Corn Chilli', price: 190, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst7', name: 'Baby Corn 65', price: 190, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst8', name: 'Baby Corn Pepper Fry', price: 220, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst9', name: 'Mushroom Chilli', price: 210, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst10', name: 'Mushroom Manchurian', price: 210, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst11', name: 'Mushroom 65', price: 210, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst12', name: 'Mushroom pepper Chilli Dry', price: 240, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst13', name: 'Veg Spring Roll', price: 250, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst14', name: 'Paneer 65', price: 220, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst15', name: 'Paneer Chilli', price: 230, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst16', name: 'Paneer Manchurian', price: 220, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst17', name: 'Paneer Kantaki', price: 240, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst18', name: 'Paneer kurkure', price: 260, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst19', name: 'Paneer Satay', price: 260, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst20', name: 'Paneer Dragon', price: 260, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst21', name: 'Paneer Majestice', price: 220, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst22', name: 'schezwan paneer', price: 220, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst23', name: 'Paneer Pakoda', price: 240, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst24', name: 'Veg 65', price: 180, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst25', name: 'Gobi 65', price: 200, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst26', name: 'Crispy Fried Corn', price: 190, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst27', name: 'Matki Fry', price: 110, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst28', name: 'Chana Roast', price: 110, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst29', name: 'Onion Pakoda', price: 110, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst30', name: 'Finger Chips', price: 120, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst31', name: 'Boil Peanut', price: 60, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst32', name: 'Chana Masalaa', price: 130, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst33', name: 'Lehsun Fry', price: 120, category: 'Veg Starter' }, // [cite: 16]
-    { id: 'vst34', name: 'Mix Chinese Platter', price: 500, category: 'Veg Starter' }, // [cite: 16]
+    { id: 17, name: 'Veg Manchurian Dry', price: 150, category: 'Veg Starter' },
+    { id: 18, name: 'Veg Manchurian Wet', price: 160, category: 'Veg Starter' },
+    { id: 19, name: 'Gobi Manchurian Dry', price: 150, category: 'Veg Starter' },
+    { id: 20, name: 'Gobi Manchurian Wet', price: 160, category: 'Veg Starter' },
+    { id: 21, name: 'Baby Corn Manchurian', price: 190, category: 'Veg Starter' },
+    { id: 22, name: 'Baby Corn Chilli', price: 190, category: 'Veg Starter' },
+    { id: 23, name: 'Baby Corn 65', price: 190, category: 'Veg Starter' },
+    { id: 24, name: 'Baby Corn Pepper Fry', price: 220, category: 'Veg Starter' },
+    { id: 25, name: 'Mushroom Chilli', price: 210, category: 'Veg Starter' },
+    { id: 26, name: 'Mushroom Manchurian', price: 210, category: 'Veg Starter' },
+    { id: 27, name: 'Mushroom 65', price: 210, category: 'Veg Starter' },
+    { id: 28, name: 'Mushroom pepper Chilli Dry', price: 240, category: 'Veg Starter' },
+    { id: 29, name: 'Veg Spring Roll', price: 250, category: 'Veg Starter' },
+    { id: 30, name: 'Paneer 65', price: 220, category: 'Veg Starter' },
+    { id: 31, name: 'Paneer Chilli', price: 230, category: 'Veg Starter' },
+    { id: 32, name: 'Paneer Manchurian', price: 220, category: 'Veg Starter' },
+    { id: 33, name: 'Paneer Kantaki', price: 240, category: 'Veg Starter' },
+    { id: 34, name: 'Paneer kurkure', price: 260, category: 'Veg Starter' },
+    { id: 35, name: 'Paneer Satay', price: 260, category: 'Veg Starter' },
+    { id: 36, name: 'Paneer Dragon', price: 260, category: 'Veg Starter' },
+    { id: 37, name: 'Paneer Majestice', price: 220, category: 'Veg Starter' },
+    { id: 38, name: 'schezwan paneer', price: 220, category: 'Veg Starter' },
+    { id: 39, name: 'Paneer Pakoda', price: 240, category: 'Veg Starter' },
+    { id: 40, name: 'Veg 65', price: 180, category: 'Veg Starter' },
+    { id: 41, name: 'Gobi 65', price: 200, category: 'Veg Starter' },
+    { id: 42, name: 'Crispy Fried Corn', price: 190, category: 'Veg Starter' },
+    { id: 43, name: 'Matki Fry', price: 110, category: 'Veg Starter' },
+    { id: 44, name: 'Chana Roast', price: 110, category: 'Veg Starter' },
+    { id: 45, name: 'Onion Pakoda', price: 110, category: 'Veg Starter' },
+    { id: 46, name: 'Finger Chips', price: 120, category: 'Veg Starter' },
+    { id: 47, name: 'Boil Peanut', price: 60, category: 'Veg Starter' },
+    { id: 48, name: 'Chana Masalaa', price: 130, category: 'Veg Starter' },
+    { id: 49, name: 'Lehsun Fry', price: 120, category: 'Veg Starter' },
+    { id: 50, name: 'Mix Chinese Platter', price: 500, category: 'Veg Starter' },
 
     // Non-Veg Starter
-    { id: 'nvst1', name: 'Chicken Lollipop (6pic)', price: 320, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst2', name: 'Chicken Lollipop (3pic)', price: 170, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst3', name: 'Chicken Drumsticks (6pic)', price: 320, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst4', name: 'Chicken Drumsticks (3pic)', price: 170, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst5', name: 'Chicken Spring Roll', price: 270, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst6', name: 'Chicken Chilli', price: 250, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst7', name: 'Chicken 65', price: 240, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst8', name: 'Chicken Manchurian', price: 240, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst9', name: 'Chicken 555', price: 280, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst10', name: 'Chicken Majestic', price: 280, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst11', name: 'Chicken Lemon', price: 260, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst12', name: 'Pepper Chicken', price: 280, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst13', name: 'Chicken Kentucky', price: 260, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst14', name: 'Chicken Kurkure', price: 320, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst15', name: 'Slice Chicken', price: 280, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst16', name: 'Chicken Wings', price: 210, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst17', name: 'garlic Chicken', price: 260, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst18', name: 'Chicken roasted', price: 250, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst19', name: 'Schezwan Chicken', price: 260, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst20', name: 'Chicken Honkong', price: 280, category: 'Non-Veg Starter' }, // [cite: 20]
-    { id: 'nvst21', name: 'Chicken Satay', price: 290, category: 'Non-Veg Starter' }, // [cite: 20]
+    { id: 51, name: 'Chicken Lollipop (6pic)', price: 320, category: 'Non-Veg Starter' },
+    { id: 52, name: 'Chicken Lollipop (3pic)', price: 170, category: 'Non-Veg Starter' },
+    { id: 53, name: 'Chicken Drumsticks (6pic)', price: 320, category: 'Non-Veg Starter' },
+    { id: 54, name: 'Chicken Drumsticks (3pic)', price: 170, category: 'Non-Veg Starter' },
+    { id: 55, name: 'Chicken Spring Roll', price: 270, category: 'Non-Veg Starter' },
+    { id: 56, name: 'Chicken Chilli', price: 250, category: 'Non-Veg Starter' },
+    { id: 57, name: 'Chicken 65', price: 240, category: 'Non-Veg Starter' },
+    { id: 58, name: 'Chicken Manchurian', price: 240, category: 'Non-Veg Starter' },
+    { id: 59, name: 'Chicken 555', price: 280, category: 'Non-Veg Starter' },
+    { id: 60, name: 'Chicken Majestic', price: 280, category: 'Non-Veg Starter' },
+    { id: 61, name: 'Chicken Lemon', price: 260, category: 'Non-Veg Starter' },
+    { id: 62, name: 'Pepper Chicken', price: 280, category: 'Non-Veg Starter' },
+    { id: 63, name: 'Chicken Kentucky', price: 260, category: 'Non-Veg Starter' },
+    { id: 64, name: 'Chicken Kurkure', price: 320, category: 'Non-Veg Starter' },
+    { id: 65, name: 'Slice Chicken', price: 280, category: 'Non-Veg Starter' },
+    { id: 66, name: 'Chicken Wings', price: 210, category: 'Non-Veg Starter' },
+    { id: 67, name: 'garlic Chicken', price: 260, category: 'Non-Veg Starter' },
+    { id: 68, name: 'Chicken roasted', price: 250, category: 'Non-Veg Starter' },
+    { id: 69, name: 'Schezwan Chicken', price: 260, category: 'Non-Veg Starter' },
+    { id: 70, name: 'Chicken Honkong', price: 280, category: 'Non-Veg Starter' },
+    { id: 71, name: 'Chicken Satay', price: 290, category: 'Non-Veg Starter' },
 
     // Sea Food Starters
-    { id: 'sf1', name: 'Apollo Fish', price: 280, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf2', name: 'Chilli Fish', price: 250, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf3', name: 'Fish Manchurian', price: 250, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf4', name: 'Fish 65', price: 250, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf5', name: 'Fish Roast', price: 180, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf6', name: 'Loose Prawns', price: 320, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf7', name: 'Chilli Prawns', price: 320, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf8', name: 'Prawns Manchurian', price: 320, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf9', name: 'Prawns 65', price: 320, category: 'Sea Food Starter' }, // [cite: 26]
-    { id: 'sf10', name: 'Fried Prawns', price: 350, category: 'Sea Food Starter' }, // [cite: 26]
+    { id: 72, name: 'Apollo Fish', price: 280, category: 'Sea Food Starter' },
+    { id: 73, name: 'Chilli Fish', price: 250, category: 'Sea Food Starter' },
+    { id: 74, name: 'Fish Manchurian', price: 250, category: 'Sea Food Starter' },
+    { id: 75, name: 'Fish 65', price: 250, category: 'Sea Food Starter' },
+    { id: 76, name: 'Fish Roast', price: 180, category: 'Sea Food Starter' },
+    { id: 77, name: 'Loose Prawns', price: 320, category: 'Sea Food Starter' },
+    { id: 78, name: 'Chilli Prawns', price: 320, category: 'Sea Food Starter' },
+    { id: 79, name: 'Prawns Manchurian', price: 320, category: 'Sea Food Starter' },
+    { id: 80, name: 'Prawns 65', price: 320, category: 'Sea Food Starter' },
+    { id: 81, name: 'Fried Prawns', price: 350, category: 'Sea Food Starter' },
 
     // Tandoori Starter Veg Kabab
-    { id: 'vk1', name: 'Paneer Tikka', price: 240, category: 'Veg Kabab' }, // [cite: 29]
-    { id: 'vk2', name: 'Paneer Malai Tikka', price: 250, category: 'Veg Kabab' }, // [cite: 29]
-    { id: 'vk3', name: 'Hara Bhara Kababs', price: 220, category: 'Veg Kabab' }, // [cite: 29]
-    { id: 'vk4', name: 'Achari Paneer Tikka', price: 250, category: 'Veg Kabab' }, // [cite: 29]
-    { id: 'vk5', name: 'Paneer Banjara', price: 260, category: 'Veg Kabab' }, // [cite: 29]
-    { id: 'vk6', name: 'Paneer Reshmi Kabab', price: 260, category: 'Veg Kabab' }, // [cite: 29]
-    { id: 'vk7', name: 'Paneer Kali Mirch', price: 260, category: 'Veg Kabab' }, // [cite: 29]
-    { id: 'vk8', name: 'Paneer Pahadi Kabab', price: 260, category: 'Veg Kabab' }, // [cite: 29]
-    { id: 'vk9', name: 'Veg Tandoor Platter', price: 1200, category: 'Veg Kabab' }, // [cite: 29]
+    { id: 82, name: 'Paneer Tikka', price: 240, category: 'Veg Kabab' },
+    { id: 83, name: 'Paneer Malai Tikka', price: 250, category: 'Veg Kabab' },
+    { id: 84, name: 'Hara Bhara Kababs', price: 220, category: 'Veg Kabab' },
+    { id: 85, name: 'Achari Paneer Tikka', price: 250, category: 'Veg Kabab' },
+    { id: 86, name: 'Paneer Banjara', price: 260, category: 'Veg Kabab' },
+    { id: 87, name: 'Paneer Reshmi Kabab', price: 260, category: 'Veg Kabab' },
+    { id: 88, name: 'Paneer Kali Mirch', price: 260, category: 'Veg Kabab' },
+    { id: 89, name: 'Paneer Pahadi Kabab', price: 260, category: 'Veg Kabab' },
+    { id: 90, name: 'Veg Tandoor Platter', price: 1200, category: 'Veg Kabab' },
 
     // Non Veg Kababs
-    { id: 'nvk1', name: 'Tandoori Chicken Full', price: 480, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk2', name: 'Tandoori Chicken Half', price: 270, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk3', name: 'Tangdi Kabab Full', price: 550, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk4', name: 'Tangdi Kabab Half', price: 300, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk5', name: 'Chicken Tikka', price: 280, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk6', name: 'Chicken Reshmi Kabab', price: 300, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk7', name: 'Chicken Banjara Kabab', price: 290, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk8', name: 'Chicken Pahadi Kabab', price: 290, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk9', name: 'Chicken Malai Kabab', price: 290, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk10', name: 'Chicken Achari Kabab', price: 290, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk11', name: 'Chicken Kali Mirch Kabab', price: 300, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk12', name: 'Tiranga Kabab', price: 380, category: 'Non Veg Kabab' }, // [cite: 31]
-    { id: 'nvk13', name: 'Nonveg Tandoor Platter', price: 1400, category: 'Non Veg Kabab' }, // [cite: 31]
+    { id: 91, name: 'Tandoori Chicken Full', price: 480, category: 'Non Veg Kabab' },
+    { id: 92, name: 'Tandoori Chicken Half', price: 270, category: 'Non Veg Kabab' },
+    { id: 93, name: 'Tangdi Kabab Full', price: 550, category: 'Non Veg Kabab' },
+    { id: 94, name: 'Tangdi Kabab Half', price: 300, category: 'Non Veg Kabab' },
+    { id: 95, name: 'Chicken Tikka', price: 280, category: 'Non Veg Kabab' },
+    { id: 96, name: 'Chicken Reshmi Kabab', price: 300, category: 'Non Veg Kabab' },
+    { id: 97, name: 'Chicken Banjara Kabab', price: 290, category: 'Non Veg Kabab' },
+    { id: 98, name: 'Chicken Pahadi Kabab', price: 290, category: 'Non Veg Kabab' },
+    { id: 99, name: 'Chicken Malai Kabab', price: 290, category: 'Non Veg Kabab' },
+    { id: 100, name: 'Chicken Achari Kabab', price: 290, category: 'Non Veg Kabab' },
+    { id: 101, name: 'Chicken Kali Mirch Kabab', price: 300, category: 'Non Veg Kabab' },
+    { id: 102, name: 'Tiranga Kabab', price: 380, category: 'Non Veg Kabab' },
+    { id: 103, name: 'Nonveg Tandoor Platter', price: 1400, category: 'Non Veg Kabab' },
 
     // Veg Main Course
-    { id: 'vmc1', name: 'Aloo Gobi', price: 180, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc2', name: 'Bhendi Fry Masala', price: 180, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc3', name: 'Baingan Masala/Bharta', price: 180, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc4', name: 'Baby Corn Mushroom Curry', price: 250, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc5', name: 'Mix Veg Curry', price: 180, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc6', name: 'Methi Malai', price: 230, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc7', name: 'Mutter Mushroom', price: 220, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc8', name: 'Veg Kolhapuri', price: 190, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc9', name: 'Veg Handi', price: 180, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc10', name: 'Veg Kadhai', price: 190, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc11', name: 'Veg Deewani Handi', price: 200, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc12', name: 'Veg Hydrabadi', price: 200, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc13', name: 'Veg Do Pyaza', price: 190, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc14', name: 'Veg Chatpata', price: 210, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc15', name: 'Veg Jaipuri', price: 210, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc16', name: 'Veg Bhuna Masala', price: 230, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc17', name: 'Lehsuni Palak', price: 220, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc18', name: 'Lehsuni Methi', price: 220, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc19', name: 'Veg Kofta', price: 250, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc20', name: 'Paneer Kofta', price: 250, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc21', name: 'Malai Kofta', price: 250, category: 'Veg Main Course' }, // [cite: 34]
-    { id: 'vmc22', name: 'Plain Palak', price: 180, category: 'Veg Main Course' }, // [cite: 36]
-    { id: 'vmc23', name: 'Tomato Chutney', price: 170, category: 'Veg Main Course' }, // [cite: 36]
-    { id: 'vmc24', name: 'Chana Masala', price: 190, category: 'Veg Main Course' }, // [cite: 36]
-    { id: 'vmc25', name: 'Rajma Masala', price: 190, category: 'Veg Main Course' }, // [cite: 36]
-    { id: 'vmc26', name: 'Gobi Masala', price: 190, category: 'Veg Main Course' }, // [cite: 36]
-    { id: 'vmc27', name: 'Tawa Besan', price: 170, category: 'Veg Main Course' }, // [cite: 36]
-    { id: 'vmc28', name: 'Besan', price: 160, category: 'Veg Main Course' }, // [cite: 36]
-    { id: 'vmc29', name: 'Shev Bhaji', price: 160, category: 'Veg Main Course' }, // [cite: 36]
-    { id: 'vmc30', name: 'Veg Gravy', price: 170, category: 'Veg Main Course' }, // [cite: 36]
+    { id: 104, name: 'Aloo Gobi', price: 180, category: 'Veg Main Course' },
+    { id: 105, name: 'Bhendi Fry Masala', price: 180, category: 'Veg Main Course' },
+    { id: 106, name: 'Baingan Masala/Bharta', price: 180, category: 'Veg Main Course' },
+    { id: 107, name: 'Baby Corn Mushroom Curry', price: 250, category: 'Veg Main Course' },
+    { id: 108, name: 'Mix Veg Curry', price: 180, category: 'Veg Main Course' },
+    { id: 109, name: 'Methi Malai', price: 230, category: 'Veg Main Course' },
+    { id: 110, name: 'Mutter Mushroom', price: 220, category: 'Veg Main Course' },
+    { id: 111, name: 'Veg Kolhapuri', price: 190, category: 'Veg Main Course' },
+    { id: 112, name: 'Veg Handi', price: 180, category: 'Veg Main Course' },
+    { id: 113, name: 'Veg Kadhai', price: 190, category: 'Veg Main Course' },
+    { id: 114, name: 'Veg Deewani Handi', price: 200, category: 'Veg Main Course' },
+    { id: 115, name: 'Veg Hydrabadi', price: 200, category: 'Veg Main Course' },
+    { id: 116, name: 'Veg Do Pyaza', price: 190, category: 'Veg Main Course' },
+    { id: 117, name: 'Veg Chatpata', price: 210, category: 'Veg Main Course' },
+    { id: 118, name: 'Veg Jaipuri', price: 210, category: 'Veg Main Course' },
+    { id: 119, name: 'Veg Bhuna Masala', price: 230, category: 'Veg Main Course' },
+    { id: 120, name: 'Lehsuni Palak', price: 220, category: 'Veg Main Course' },
+    { id: 121, name: 'Lehsuni Methi', price: 220, category: 'Veg Main Course' },
+    { id: 122, name: 'Veg Kofta', price: 250, category: 'Veg Main Course' },
+    { id: 123, name: 'Paneer Kofta', price: 250, category: 'Veg Main Course' },
+    { id: 124, name: 'Malai Kofta', price: 250, category: 'Veg Main Course' },
+    { id: 125, name: 'Plain Palak', price: 180, category: 'Veg Main Course' },
+    { id: 126, name: 'Tomato Chutney', price: 170, category: 'Veg Main Course' },
+    { id: 127, name: 'Chana Masala', price: 190, category: 'Veg Main Course' },
+    { id: 128, name: 'Rajma Masala', price: 190, category: 'Veg Main Course' },
+    { id: 129, name: 'Gobi Masala', price: 190, category: 'Veg Main Course' },
+    { id: 130, name: 'Tawa Besan', price: 170, category: 'Veg Main Course' },
+    { id: 131, name: 'Besan', price: 160, category: 'Veg Main Course' },
+    { id: 132, name: 'Shev Bhaji', price: 160, category: 'Veg Main Course' },
+    { id: 133, name: 'Veg Gravy', price: 170, category: 'Veg Main Course' },
 
     // Paneer Main Course
-    { id: 'pmc1', name: 'Paneer Butter Masala', price: 240, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc2', name: 'Paneer Tikka Masala', price: 260, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc3', name: 'Paneer Maharaja', price: 270, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc4', name: 'Paneer Lajjatdar', price: 260, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc5', name: 'Paneer Kadai', price: 250, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc6', name: 'Paneer Shahi', price: 260, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc7', name: 'Paneer Do Pyaza', price: 250, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc8', name: 'Palak Paneer', price: 220, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc9', name: 'Paneer Chatpata', price: 250, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc10', name: 'Paneer Kolhapuri', price: 250, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc11', name: 'Paneer Hyderabadi', price: 260, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc12', name: 'Paneer Punjabi', price: 260, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc13', name: 'Kaju Paneer', price: 280, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc14', name: 'Kaju Curry/Masala', price: 290, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc15', name: 'Mushroom Paneer', price: 290, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc16', name: 'Mushroom Curry/Masala', price: 280, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc17', name: 'Paneer Nawabi', price: 300, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc18', name: 'Paneer Shahi Korma', price: 290, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc19', name: 'Methi Chaman', price: 300, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc20', name: 'Paneer Bhurji', price: 280, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc21', name: 'Veg Gravy Kaju', price: 200, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc22', name: 'Paneer Masala', price: 210, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc23', name: 'Methi Paneer', price: 240, category: 'Paneer Main Course' }, // [cite: 38]
-    { id: 'pmc24', name: 'Mutter Paneer', price: 260, category: 'Paneer Main Course' }, // [cite: 38]
+    { id: 134, name: 'Paneer Butter Masala', price: 240, category: 'Paneer Main Course' },
+    { id: 135, name: 'Paneer Tikka Masala', price: 260, category: 'Paneer Main Course' },
+    { id: 136, name: 'Paneer Maharaja', price: 270, category: 'Paneer Main Course' },
+    { id: 137, name: 'Paneer Lajjatdar', price: 260, category: 'Paneer Main Course' },
+    { id: 138, name: 'Paneer Kadai', price: 250, category: 'Paneer Main Course' },
+    { id: 139, name: 'Paneer Shahi', price: 260, category: 'Paneer Main Course' },
+    { id: 140, name: 'Paneer Do Pyaza', price: 250, category: 'Paneer Main Course' },
+    { id: 141, name: 'Palak Paneer', price: 220, category: 'Paneer Main Course' },
+    { id: 142, name: 'Paneer Chatpata', price: 250, category: 'Paneer Main Course' },
+    { id: 143, name: 'Paneer Kolhapuri', price: 250, category: 'Paneer Main Course' },
+    { id: 144, name: 'Paneer Hyderabadi', price: 260, category: 'Paneer Main Course' },
+    { id: 145, name: 'Paneer Punjabi', price: 260, category: 'Paneer Main Course' },
+    { id: 146, name: 'Kaju Paneer', price: 280, category: 'Paneer Main Course' },
+    { id: 147, name: 'Kaju Curry/Masala', price: 290, category: 'Paneer Main Course' },
+    { id: 148, name: 'Mushroom Paneer', price: 290, category: 'Paneer Main Course' },
+    { id: 149, name: 'Mushroom Curry/Masala', price: 280, category: 'Paneer Main Course' },
+    { id: 150, name: 'Paneer Nawabi', price: 300, category: 'Paneer Main Course' },
+    { id: 151, name: 'Paneer Shahi Korma', price: 290, category: 'Paneer Main Course' },
+    { id: 152, name: 'Methi Chaman', price: 300, category: 'Paneer Main Course' },
+    { id: 153, name: 'Paneer Bhurji', price: 280, category: 'Paneer Main Course' },
+    { id: 154, name: 'Veg Gravy Kaju', price: 200, category: 'Paneer Main Course' },
+    { id: 155, name: 'Paneer Masala', price: 210, category: 'Paneer Main Course' },
+    { id: 156, name: 'Methi Paneer', price: 240, category: 'Paneer Main Course' },
+    { id: 157, name: 'Mutter Paneer', price: 260, category: 'Paneer Main Course' },
 
     // Non-Veg Main Course (Chicken & Egg)
-    { id: 'nvmc1', name: 'Butter Chicken (Boneless)', price: 280, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc2', name: 'Chicken Tikka Masala', price: 290, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc3', name: 'Chicken Curry', price: 250, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc4', name: 'Chicken lapeta', price: 250, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc5', name: 'Chicken Kadai', price: 280, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc6', name: 'Chicken Do Pyaza', price: 260, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc7', name: 'Chicken Adraki', price: 280, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc8', name: 'Chicken Rada Masala', price: 290, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc9', name: 'Chicken Afgani Masala', price: 300, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc10', name: 'Dum Ka Chicken', price: 320, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc11', name: 'Methi Chicken', price: 300, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc12', name: 'Chicken Mughlai', price: 300, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc13', name: 'Andhra Chicken', price: 290, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc14', name: 'Chicken Kolhapuri', price: 290, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc15', name: 'Chicken Hydrabadi', price: 290, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc16', name: 'Chicken Nawabi', price: 310, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc17', name: 'Chicken Punjabi', price: 310, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc18', name: 'Chicken Achari Curry', price: 280, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc19', name: 'Chicken Masala', price: 280, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc20', name: 'Egg Boil', price: 40, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc21', name: 'Egg Boil Fry', price: 60, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc22', name: 'Egg Omelette', price: 90, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc23', name: 'Egg Curry', price: 150, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc24', name: 'Egg Masala', price: 170, category: 'Non-Veg Main Course' }, // [cite: 42]
-    { id: 'nvmc25', name: 'Egg Bhurji', price: 130, category: 'Non-Veg Main Course' }, // [cite: 42]
+    { id: 158, name: 'Butter Chicken (Boneless)', price: 280, category: 'Non-Veg Main Course' },
+    { id: 159, name: 'Chicken Tikka Masala', price: 290, category: 'Non-Veg Main Course' },
+    { id: 160, name: 'Chicken Curry', price: 250, category: 'Non-Veg Main Course' },
+    { id: 161, name: 'Chicken lapeta', price: 250, category: 'Non-Veg Main Course' },
+    { id: 162, name: 'Chicken Kadai', price: 280, category: 'Non-Veg Main Course' },
+    { id: 163, name: 'Chicken Do Pyaza', price: 260, category: 'Non-Veg Main Course' },
+    { id: 164, name: 'Chicken Adraki', price: 280, category: 'Non-Veg Main Course' },
+    { id: 165, name: 'Chicken Rada Masala', price: 290, category: 'Non-Veg Main Course' },
+    { id: 166, name: 'Chicken Afgani Masala', price: 300, category: 'Non-Veg Main Course' },
+    { id: 167, name: 'Dum Ka Chicken', price: 320, category: 'Non-Veg Main Course' },
+    { id: 168, name: 'Methi Chicken', price: 300, category: 'Non-Veg Main Course' },
+    { id: 169, name: 'Chicken Mughlai', price: 300, category: 'Non-Veg Main Course' },
+    { id: 170, name: 'Andhra Chicken', price: 290, category: 'Non-Veg Main Course' },
+    { id: 171, name: 'Chicken Kolhapuri', price: 290, category: 'Non-Veg Main Course' },
+    { id: 172, name: 'Chicken Hydrabadi', price: 290, category: 'Non-Veg Main Course' },
+    { id: 173, name: 'Chicken Nawabi', price: 310, category: 'Non-Veg Main Course' },
+    { id: 174, name: 'Chicken Punjabi', price: 310, category: 'Non-Veg Main Course' },
+    { id: 175, name: 'Chicken Achari Curry', price: 280, category: 'Non-Veg Main Course' },
+    { id: 176, name: 'Chicken Masala', price: 280, category: 'Non-Veg Main Course' },
+    { id: 177, name: 'Egg Boil', price: 40, category: 'Non-Veg Main Course' },
+    { id: 178, name: 'Egg Boil Fry', price: 60, category: 'Non-Veg Main Course' },
+    { id: 179, name: 'Egg Omelette', price: 90, category: 'Non-Veg Main Course' },
+    { id: 180, name: 'Egg Curry', price: 150, category: 'Non-Veg Main Course' },
+    { id: 181, name: 'Egg Masala', price: 170, category: 'Non-Veg Main Course' },
+    { id: 182, name: 'Egg Bhurji', price: 130, category: 'Non-Veg Main Course' },
 
     // Mutton Main Course
-    { id: 'mmc1', name: 'Mutton Curry', price: 270, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc2', name: 'Mutton Masala', price: 290, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc3', name: 'Andhra Mutton', price: 300, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc4', name: 'Mutton Mughlai', price: 300, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc5', name: 'Mutton Afghani', price: 300, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc6', name: 'Mutton Do Pyaza', price: 280, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc7', name: 'Mutton Kali Mirch', price: 280, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc8', name: 'Mutton Fry', price: 290, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc9', name: 'Achari Mutton', price: 280, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc10', name: 'Methi Mutton', price: 290, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc11', name: 'Mutton Kolhapuri', price: 300, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc12', name: 'Mutton Hydrabadi', price: 310, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc13', name: 'Mutton Kheema', price: 330, category: 'Mutton Main Course' }, // [cite: 45]
-    { id: 'mmc14', name: 'Mutton Korma', price: 330, category: 'Mutton Main Course' }, // [cite: 45]
+    { id: 183, name: 'Mutton Curry', price: 270, category: 'Mutton Main Course' },
+    { id: 184, name: 'Mutton Masala', price: 290, category: 'Mutton Main Course' },
+    { id: 185, name: 'Andhra Mutton', price: 300, category: 'Mutton Main Course' },
+    { id: 186, name: 'Mutton Mughlai', price: 300, category: 'Mutton Main Course' },
+    { id: 187, name: 'Mutton Afghani', price: 300, category: 'Mutton Main Course' },
+    { id: 188, name: 'Mutton Do Pyaza', price: 280, category: 'Mutton Main Course' },
+    { id: 189, name: 'Mutton Kali Mirch', price: 280, category: 'Mutton Main Course' },
+    { id: 190, name: 'Mutton Fry', price: 290, category: 'Mutton Main Course' },
+    { id: 191, name: 'Achari Mutton', price: 280, category: 'Mutton Main Course' },
+    { id: 192, name: 'Methi Mutton', price: 290, category: 'Mutton Main Course' },
+    { id: 193, name: 'Mutton Kolhapuri', price: 300, category: 'Mutton Main Course' },
+    { id: 194, name: 'Mutton Hydrabadi', price: 310, category: 'Mutton Main Course' },
+    { id: 195, name: 'Mutton Kheema', price: 330, category: 'Mutton Main Course' },
+    { id: 196, name: 'Mutton Korma', price: 330, category: 'Mutton Main Course' },
 
     // Sea Food Main Course
-    { id: 'sfm1', name: 'Fish Curry', price: 290, category: 'Sea Food Main Course' }, // [cite: 48]
-    { id: 'sfm2', name: 'Fish Fry', price: 290, category: 'Sea Food Main Course' }, // [cite: 48]
-    { id: 'sfm3', name: 'Fish Masala', price: 290, category: 'Sea Food Main Course' }, // [cite: 48]
-    { id: 'sfm4', name: 'Prawn Curry', price: 320, category: 'Sea Food Main Course' }, // [cite: 48]
-    { id: 'sfm5', name: 'Prawn Fry', price: 320, category: 'Sea Food Main Course' }, // [cite: 48]
-    { id: 'sfm6', name: 'Prawn masala', price: 320, category: 'Sea Food Main Course' }, // [cite: 48]
+    { id: 197, name: 'Fish Curry', price: 290, category: 'Sea Food Main Course' },
+    { id: 198, name: 'Fish Fry', price: 290, category: 'Sea Food Main Course' },
+    { id: 199, name: 'Fish Masala', price: 290, category: 'Sea Food Main Course' },
+    { id: 200, name: 'Prawn Curry', price: 320, category: 'Sea Food Main Course' },
+    { id: 201, name: 'Prawn Fry', price: 320, category: 'Sea Food Main Course' },
+    { id: 202, name: 'Prawn masala', price: 320, category: 'Sea Food Main Course' },
 
     // Non-Veg Biryani
-    { id: 'nvb1', name: 'Egg Biryani', price: 230, category: 'Non-Veg Biryani' }, // [cite: 50, 51]
-    { id: 'nvb2', name: 'Chicken Biryani', price: 270, category: 'Non-Veg Biryani' }, // [cite: 52, 53]
-    { id: 'nvb3', name: 'Spl.Chicken Biryani', price: 320, category: 'Non-Veg Biryani' }, // [cite: 54, 55]
-    { id: 'nvb4', name: 'Chicken Family Pack', price: 700, category: 'Non-Veg Biryani' }, // [cite: 56, 57]
-    { id: 'nvb5', name: 'Mutton Biryani', price: 290, category: 'Non-Veg Biryani' }, // [cite: 59, 60]
-    { id: 'nvb6', name: 'Spl.Mutton Biryani', price: 370, category: 'Non-Veg Biryani' }, // [cite: 61, 62]
-    { id: 'nvb7', name: 'Mutton Family Pack', price: 900, category: 'Non-Veg Biryani' }, // [cite: 63, 64]
-    { id: 'nvb8', name: 'Fish Biryani', price: 250, category: 'Non-Veg Biryani' }, // [cite: 66, 67]
-    { id: 'nvb9', name: 'Prawn Biryani', price: 300, category: 'Non-Veg Biryani' }, // [cite: 68, 69]
+    { id: 203, name: 'Egg Biryani', price: 230, category: 'Non-Veg Biryani' },
+    { id: 204, name: 'Chicken Biryani', price: 270, category: 'Non-Veg Biryani' },
+    { id: 205, name: 'Spl.Chicken Biryani', price: 320, category: 'Non-Veg Biryani' },
+    { id: 206, name: 'Chicken Family Pack', price: 700, category: 'Non-Veg Biryani' },
+    { id: 207, name: 'Mutton Biryani', price: 290, category: 'Non-Veg Biryani' },
+    { id: 208, name: 'Spl.Mutton Biryani', price: 370, category: 'Non-Veg Biryani' },
+    { id: 209, name: 'Mutton Family Pack', price: 900, category: 'Non-Veg Biryani' },
+    { id: 210, name: 'Fish Biryani', price: 250, category: 'Non-Veg Biryani' },
+    { id: 211, name: 'Prawn Biryani', price: 300, category: 'Non-Veg Biryani' },
 
     // Veg Biryani
-    { id: 'vb1', name: 'Veg Biryani', price: 200, category: 'Veg Biryani' }, // [cite: 72]
-    { id: 'vb2', name: 'Kaju Biryani', price: 260, category: 'Veg Biryani' }, // [cite: 72]
-    { id: 'vb3', name: 'Paneer Biryani', price: 260, category: 'Veg Biryani' }, // [cite: 72]
-    { id: 'vb4', name: 'Mushroom Biryani', price: 280, category: 'Veg Biryani' }, // [cite: 72]
+    { id: 212, name: 'Veg Biryani', price: 200, category: 'Veg Biryani' },
+    { id: 213, name: 'Kaju Biryani', price: 260, category: 'Veg Biryani' },
+    { id: 214, name: 'Paneer Biryani', price: 260, category: 'Veg Biryani' },
+    { id: 215, name: 'Mushroom Biryani', price: 280, category: 'Veg Biryani' },
 
     // Handi
-    { id: 'h1', name: 'Gavran Chicken Plate', price: 300, category: 'Handi' }, // [cite: 76]
-    { id: 'h2', name: 'Gavran Chicken Handi Full', price: 1200, category: 'Handi' }, // [cite: 76]
-    { id: 'h3', name: 'Gavran Chicken Handi Half', price: 650, category: 'Handi' }, // [cite: 76]
-    { id: 'h4', name: 'Broiler Chicken Handi Full', price: 900, category: 'Handi' }, // [cite: 76]
-    { id: 'h5', name: 'Broiler Chicken Handi Half', price: 500, category: 'Handi' }, // [cite: 76]
-    { id: 'h6', name: 'Mutton Handi Full', price: 1200, category: 'Handi' }, // [cite: 76]
-    { id: 'h7', name: 'Mutton Handi Half', price: 680, category: 'Handi' }, // [cite: 76]
+    { id: 216, name: 'Gavran Chicken Plate', price: 300, category: 'Handi' },
+    { id: 217, name: 'Gavran Chicken Handi Full', price: 1200, category: 'Handi' },
+    { id: 218, name: 'Gavran Chicken Handi Half', price: 650, category: 'Handi' },
+    { id: 219, name: 'Broiler Chicken Handi Full', price: 900, category: 'Handi' },
+    { id: 220, name: 'Broiler Chicken Handi Half', price: 500, category: 'Handi' },
+    { id: 221, name: 'Mutton Handi Full', price: 1200, category: 'Handi' },
+    { id: 222, name: 'Mutton Handi Half', price: 680, category: 'Handi' },
 
     // Roti
-    { id: 'r1', name: 'Tandoor Roti', price: 20, category: 'Roti' }, // [cite: 79]
-    { id: 'r2', name: 'Butter Roti', price: 25, category: 'Roti' }, // [cite: 79]
-    { id: 'r3', name: 'Plain Naan', price: 40, category: 'Roti' }, // [cite: 79]
-    { id: 'r4', name: 'Butter Naan', price: 50, category: 'Roti' }, // [cite: 79]
-    { id: 'r5', name: 'Cheese Naan', price: 65, category: 'Roti' }, // [cite: 79]
-    { id: 'r6', name: 'Garlic Naan', price: 60, category: 'Roti' }, // [cite: 79]
-    { id: 'r7', name: 'Chapati', price: 15, category: 'Roti' }, // [cite: 79]
-    { id: 'r8', name: 'Butter Chapati', price: 20, category: 'Roti' }, // [cite: 79]
-    { id: 'r9', name: 'Phulka', price: 15, category: 'Roti' }, // [cite: 79]
-    { id: 'r10', name: 'Jawar Roti', price: 25, category: 'Roti' }, // [cite: 79]
-    { id: 'r11', name: 'Tawa Paratha', price: 25, category: 'Roti' }, // [cite: 79]
-    { id: 'r12', name: 'Tawa Butter Paratha', price: 30, category: 'Roti' }, // [cite: 79]
-    { id: 'r13', name: 'Lachcha Paratha', price: 40, category: 'Roti' }, // [cite: 79]
-    { id: 'r14', name: 'Plain kulcha', price: 65, category: 'Roti' }, // [cite: 79]
-    { id: 'r15', name: 'Paneer Kulcha', price: 75, category: 'Roti' }, // [cite: 79]
-    { id: 'r16', name: 'Masala Kulcha', price: 75, category: 'Roti' }, // [cite: 79]
-    { id: 'r17', name: 'Aloo Paratha', price: 70, category: 'Roti' }, // [cite: 79]
-    { id: 'r18', name: 'Roasted Papad', price: 15, category: 'Roti' }, // [cite: 79]
-    { id: 'r19', name: 'Fry Papad', price: 20, category: 'Roti' }, // [cite: 79]
-    { id: 'r20', name: 'Masala Papad', price: 25, category: 'Roti' }, // [cite: 79]
-    { id: 'r21', name: 'Tandur Roti Basket', price: 250, category: 'Roti' }, // [cite: 79]
+    { id: 223, name: 'Tandoor Roti', price: 20, category: 'Roti' },
+    { id: 224, name: 'Butter Roti', price: 25, category: 'Roti' },
+    { id: 225, name: 'Plain Naan', price: 40, category: 'Roti' },
+    { id: 226, name: 'Butter Naan', price: 50, category: 'Roti' },
+    { id: 227, name: 'Cheese Naan', price: 65, category: 'Roti' },
+    { id: 228, name: 'Garlic Naan', price: 60, category: 'Roti' },
+    { id: 229, name: 'Chapati', price: 15, category: 'Roti' },
+    { id: 230, name: 'Butter Chapati', price: 20, category: 'Roti' },
+    { id: 231, name: 'Phulka', price: 15, category: 'Roti' },
+    { id: 232, name: 'Jawar Roti', price: 25, category: 'Roti' },
+    { id: 233, name: 'Tawa Paratha', price: 25, category: 'Roti' },
+    { id: 234, name: 'Tawa Butter Paratha', price: 30, category: 'Roti' },
+    { id: 235, name: 'Lachcha Paratha', price: 40, category: 'Roti' },
+    { id: 236, name: 'Plain kulcha', price: 65, category: 'Roti' },
+    { id: 237, name: 'Paneer Kulcha', price: 75, category: 'Roti' },
+    { id: 238, name: 'Masala Kulcha', price: 75, category: 'Roti' },
+    { id: 239, name: 'Aloo Paratha', price: 70, category: 'Roti' },
+    { id: 240, name: 'Roasted Papad', price: 15, category: 'Roti' },
+    { id: 241, name: 'Fry Papad', price: 20, category: 'Roti' },
+    { id: 242, name: 'Masala Papad', price: 25, category: 'Roti' },
+    { id: 243, name: 'Tandur Roti Basket', price: 250, category: 'Roti' },
 
     // Dal Menu
-    { id: 'd1', name: 'Plain Dal', price: 100, category: 'Dal Menu' }, // [cite: 82]
-    { id: 'd2', name: 'Jeera Dal', price: 120, category: 'Dal Menu' }, // [cite: 82]
-    { id: 'd3', name: 'Dal Fry', price: 120, category: 'Dal Menu' }, // [cite: 82]
-    { id: 'd4', name: 'Dal Tadka', price: 130, category: 'Dal Menu' }, // [cite: 82]
-    { id: 'd5', name: 'Methi Dal Fry', price: 140, category: 'Dal Menu' }, // [cite: 82]
-    { id: 'd6', name: 'Butter Dal', price: 140, category: 'Dal Menu' }, // [cite: 82]
+    { id: 244, name: 'Plain Dal', price: 100, category: 'Dal Menu' },
+    { id: 245, name: 'Jeera Dal', price: 120, category: 'Dal Menu' },
+    { id: 246, name: 'Dal Fry', price: 120, category: 'Dal Menu' },
+    { id: 247, name: 'Dal Tadka', price: 130, category: 'Dal Menu' },
+    { id: 248, name: 'Methi Dal Fry', price: 140, category: 'Dal Menu' },
+    { id: 249, name: 'Butter Dal', price: 140, category: 'Dal Menu' },
 
     // Rice & Noodles
-    { id: 'rn1', name: 'Plain Rice (Half)', price: 70, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn2', name: 'Plain Rice (Full)', price: 120, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn3', name: 'Steam Rice (Half)', price: 80, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn4', name: 'Steam Rice (Full)', price: 140, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn5', name: 'Jeera Rice (Half)', price: 90, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn6', name: 'Jeera Rice (Full)', price: 150, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn7', name: 'Garlic Rice', price: 170, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn8', name: 'Lemon Rice', price: 160, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn9', name: 'Masala Rice', price: 170, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn10', name: 'Curd Rice', price: 120, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn11', name: 'Dal Khichadi', price: 170, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn12', name: 'Veg Pulao', price: 180, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn13', name: 'Veg Fried Rice', price: 170, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn14', name: 'Mix Fried Rice', price: 240, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn15', name: 'Egg Fried Rice', price: 190, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn16', name: 'Chicken Fried Rice', price: 220, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn17', name: 'Veg Noodles', price: 150, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn18', name: 'Veg Hakka Noodles', price: 170, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn19', name: 'Schezwan Noodles', price: 170, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn20', name: 'Egg Noodles', price: 180, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn21', name: 'Chicken Noodles', price: 190, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn22', name: 'Chicken Hakka Noodles', price: 210, category: 'Rice & Noodles' }, // [cite: 84]
-    { id: 'rn23', name: 'Chicken Hongkong Noodles', price: 230, category: 'Rice & Noodles' }, // [cite: 84]
+    { id: 250, name: 'Plain Rice (Half)', price: 70, category: 'Rice & Noodles' },
+    { id: 251, name: 'Plain Rice (Full)', price: 120, category: 'Rice & Noodles' },
+    { id: 252, name: 'Steam Rice (Half)', price: 80, category: 'Rice & Noodles' },
+    { id: 253, name: 'Steam Rice (Full)', price: 140, category: 'Rice & Noodles' },
+    { id: 254, name: 'Jeera Rice (Half)', price: 90, category: 'Rice & Noodles' },
+    { id: 255, name: 'Jeera Rice (Full)', price: 150, category: 'Rice & Noodles' },
+    { id: 256, name: 'Garlic Rice', price: 170, category: 'Rice & Noodles' },
+    { id: 257, name: 'Lemon Rice', price: 160, category: 'Rice & Noodles' },
+    { id: 258, name: 'Masala Rice', price: 170, category: 'Rice & Noodles' },
+    { id: 259, name: 'Curd Rice', price: 120, category: 'Rice & Noodles' },
+    { id: 260, name: 'Dal Khichadi', price: 170, category: 'Rice & Noodles' },
+    { id: 261, name: 'Veg Pulao', price: 180, category: 'Rice & Noodles' },
+    { id: 262, name: 'Veg Fried Rice', price: 170, category: 'Rice & Noodles' },
+    { id: 263, name: 'Mix Fried Rice', price: 240, category: 'Rice & Noodles' },
+    { id: 264, name: 'Egg Fried Rice', price: 190, category: 'Rice & Noodles' },
+    { id: 265, name: 'Chicken Fried Rice', price: 220, category: 'Rice & Noodles' },
+    { id: 266, name: 'Veg Noodles', price: 150, category: 'Rice & Noodles' },
+    { id: 267, name: 'Veg Hakka Noodles', price: 170, category: 'Rice & Noodles' },
+    { id: 268, name: 'Schezwan Noodles', price: 170, category: 'Rice & Noodles' },
+    { id: 269, name: 'Egg Noodles', price: 180, category: 'Rice & Noodles' },
+    { id: 270, name: 'Chicken Noodles', price: 190, category: 'Rice & Noodles' },
+    { id: 271, name: 'Chicken Hakka Noodles', price: 210, category: 'Rice & Noodles' },
+    { id: 272, name: 'Chicken Hongkong Noodles', price: 230, category: 'Rice & Noodles' },
 
     // Raita & Salad
-    { id: 'rs1', name: 'Plain Raita', price: 50, category: 'Raita' }, // [cite: 87]
-    { id: 'rs2', name: 'Onion Raita', price: 60, category: 'Raita' }, // [cite: 87]
-    { id: 'rs3', name: 'Mixed Raita', price: 60, category: 'Raita' }, // [cite: 87]
-    { id: 'rs4', name: 'Green Raita', price: 80, category: 'Raita' }, // [cite: 87]
-    { id: 'rs5', name: 'Green Salad', price: 50, category: 'Raita' }, // [cite: 87]
+    { id: 273, name: 'Plain Raita', price: 50, category: 'Raita' },
+    { id: 274, name: 'Onion Raita', price: 60, category: 'Raita' },
+    { id: 275, name: 'Mixed Raita', price: 60, category: 'Raita' },
+    { id: 276, name: 'Green Raita', price: 80, category: 'Raita' },
+    { id: 277, name: 'Green Salad', price: 50, category: 'Raita' },
 
     // Hot Beverages
-    { id: 'hb1', name: 'Tea', price: 30, category: 'Hot Beverages' }, // [cite: 89]
-    { id: 'hb2', name: 'Milk', price: 30, category: 'Hot Beverages' }, // [cite: 89]
-    { id: 'hb3', name: 'Coffee', price: 40, category: 'Hot Beverages' }, // [cite: 89]
-    { id: 'hb4', name: 'Green Tea', price: 40, category: 'Hot Beverages' }, // [cite: 89]
+    { id: 278, name: 'Tea', price: 30, category: 'Hot Beverages' },
+    { id: 279, name: 'Milk', price: 30, category: 'Hot Beverages' },
+    { id: 280, name: 'Coffee', price: 40, category: 'Hot Beverages' },
+    { id: 281, name: 'Green Tea', price: 40, category: 'Hot Beverages' },
 
     // Soft Drinks
-    { id: 'sd1', name: 'Water Bottle', price: 20, category: 'Soft Drinks' }, // [cite: 92]
-    { id: 'sd2', name: 'Soft Drinks', price: 25, category: 'Soft Drinks' }, // [cite: 92]
-    { id: 'sd3', name: 'Fresh Lime Soda', price: 50, category: 'Soft Drinks' }, // [cite: 92]
-    { id: 'sd4', name: 'Lassi', price: 50, category: 'Soft Drinks' }, // [cite: 92]
-    { id: 'sd5', name: 'Butter Milk', price: 50, category: 'Soft Drinks' }, // [cite: 92]
-    { id: 'sd6', name: 'Cold Coffee', price: 100, category: 'Soft Drinks' }, // [cite: 92]
+    { id: 282, name: 'Water Bottle', price: 20, category: 'Soft Drinks' },
+    { id: 283, name: 'Soft Drinks', price: 25, category: 'Soft Drinks' },
+    { id: 284, name: 'Fresh Lime Soda', price: 50, category: 'Soft Drinks' },
+    { id: 285, name: 'Lassi', price: 50, category: 'Soft Drinks' },
+    { id: 286, name: 'Butter Milk', price: 50, category: 'Soft Drinks' },
+    { id: 287, name: 'Cold Coffee', price: 100, category: 'Soft Drinks' },
 
     // Party-Thaliz
-    { id: 'pt1', name: 'Thali', price: 350, category: 'Thali' }, // [cite: 95]
-    { id: 'pt2', name: 'Spl.Thali', price: 450, category: 'Thali' }, // [cite: 95]
-    { id: 'pt3', name: 'Deluxe Thali', price: 500, category: 'Thali' }, // [cite: 95]
+    { id: 288, name: 'Thali', price: 350, category: 'Thali' },
+    { id: 289, name: 'Spl.Thali', price: 450, category: 'Thali' },
+    { id: 290, name: 'Deluxe Thali', price: 500, category: 'Thali' },
 
     // Ice-Cream
-    { id: 'ic1', name: 'Chocolate', price: 50, category: 'Ice-Cream' }, // [cite: 97]
-    { id: 'ic2', name: 'Strawberry', price: 40, category: 'Ice-Cream' }, // [cite: 97]
-    { id: 'ic3', name: 'Vanilla', price: 40, category: 'Ice-Cream' }, // [cite: 97]
-    { id: 'ic4', name: 'Butterscotch', price: 50, category: 'Ice-Cream' } // [cite: 97]
+    { id: 291, name: 'Chocolate', price: 50, category: 'Ice-Cream' },
+    { id: 292, name: 'Strawberry', price: 40, category: 'Ice-Cream' },
+    { id: 293, name: 'Vanilla', price: 40, category: 'Ice-Cream' },
+    { id: 294, name: 'Butterscotch', price: 50, category: 'Ice-Cream' }
 ];
-      const categories = ['starters', 'main', 'drinks'];
-      const categoryTitles = { starters: '🍴 Starters', main: '🍛 Main Course', drinks: '🥂 Drinks' };
-      let cart = {};
 
+// Helper to automatically extract unique categories from your menuItems array!
+const categories = [...new Set(menuItems.map(item => item.category))];
+
+// If you want to give them emojis/titles, you can map them like this:
+const categoryTitles = categories.reduce((acc, cat) => {
+    acc[cat] = `🍽️ ${cat}`; // You can customize individual ones later if needed!
+    return acc;
+}, {});
+
+let cart = {};
       // DOM elements
       const categoryBar = document.getElementById('categoryBar');
       const menuContainer = document.getElementById('menuContainer');
